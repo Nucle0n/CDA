@@ -1,0 +1,47 @@
+VARIABLES : Prix, SommeIntroduite, Piece, StockGobelets
+
+//On considère qu'il y a 5 gobelets
+StockGobelets <- 5
+SommeIntroduite <- 0 
+Prix <- 0
+Piece <- 0
+
+SI
+StockGobelets == 0
+AFFICHER "Machine indisponible | Stock gobelet vide"
+SINON
+AFFICHER "Choisir votre boisson"
+LIRE "Choixboisson"
+Prix <- prixaffiché
+SommeIntroduite <- 0
+FAIRE
+insérer pièce
+SommeIntroduite = SommeIntroduite + Piece
+TANT QUE (SommeIntroduite < prixaffiché)
+SI SommeIntroduite > prixaffiché
+ALORS
+retourmonnaie (SommeIntroduite - prixaffiché)
+FIN SI
+préparerboisson()
+afficher "Stock gobelet maj"
+StockGobelets = StockGobelets -1;
+StockGobelets--
+AFFICHER "Opération terminé, merci de votre visite"
+FIN SI
+
+-----------------------
+Debut programme
+
+nGob <- random 0-50
+prix <- 0
+userIn <- 0
+
+SI 
+    nGob = 0 ALORS
+    AFFICHER 'Err 001 : Stock de gobelets épuisé !'
+SINON
+    AFFICHER 'Choisissez votre boisson (1/2/3)'
+    LIRE userIn
+    SI 
+        userIn != 1 || 2 || 3
+        AFFICHER 'Err: Choix Invalide'
