@@ -5,12 +5,12 @@ async function main() {
 
     const sc= new createInterface({input,output});
     let nb  = await sc.question(`Entrez un nombre entier : `);
-    
-    if (nb < 2){
-        console.log(`${nb} n'a pas de diviseur autre 1 et lui-même !`);
-    }
-
     let div = [];
+    
+    for (let i = 2; i <= nb; i++){
+
+    }
+    
 
     div.push(1);
     for (let i = 2; i <= Math.sqrt(nb); i++)
