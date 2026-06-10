@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculateur d'Intérêts</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        background: #f5f7fa;
+        color: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .card {
+        background: white;
+        width: 100%;
+        max-width: 500px;
+        padding: 35px;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    .field {
+        margin-bottom: 18px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.95rem;
+        color: #555;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #4a90e2;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 8px;
+        background: #4a90e2;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        background: #3578c8;
+    }
+
+    .resultats {
+        margin-top: 25px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+    }
+
+    .bloc {
+        margin-bottom: 15px;
+    }
+
+    .titre {
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+
+    .valeur {
+        color: #d68a00;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Calculateur d'Intérêts</h1>
+
+    <div class="field">
+        <label>Montant présent sur le compte (€)</label>
+        <input type="number" id="somme" step="0.01" min="0">
+    </div>
+
+    <div class="field">
+        <label>Taux d'intérêt annuel (%)</label>
+        <input type="number" id="taux" step="0.01" min="0">
+    </div>
+
+    <div class="field">
+        <label>Nombre d'années</label>
+        <input type="number" id="nbA" step="1" min="1">
+    </div>
+
+    <button onclick="calculer()">
+        Calculer
+    </button>
+
+    <div class="resultats" id="resultats" style="display:none;">
+        <div class="bloc">
+            <div class="titre">Intérêts simples</div>
+            <div>
+                Gain : <span class="valeur" id="intSimple"></span><br>
+                Capital final : <span class="valeur" id="capSimple"></span>
+            </div>
+        </div>
+
+        <div class="bloc">
+            <div class="titre">Intérêts composés</div>
+            <div>
+                Gain : <span class="valeur" id="intCompose"></span><br>
+                Capital final : <span class="valeur" id="capCompose"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function calculer() {
+
+    const somme = parseFloat(document.getElementById("somme").value);
+    const taux  = parseFloat(document.getElementById("taux").value) / 100;
+    const nbA   = parseFloat(document.getElementById("nbA").value);
+
+    if (isNaN(somme) || isNaN(taux) || isNaN(nbA)) {
+        alert("Veuillez remplir tous les champs.");
+        return;
+    }
+
+    // Même logique que ton script Node.js
+
+    const intSimp = somme * taux * nbA;
+
+    const intComp =
+        Math.round(
+            ((somme * Math.pow(1 + taux, nbA)) - somme) * 100
+        ) / 100;
+
+    document.getElementById("intSimple").textContent =
+        intSimp.toFixed(2) + " €";
+
+    document.getElementById("capSimple").textContent =
+        (somme + intSimp).toFixed(2) + " €";
+
+    document.getElementById("intCompose").textContent =
+        intComp.toFixed(2) + " €";
+
+    document.getElementById("capCompose").textContent =
+        (somme + intComp).toFixed(2) + " €";
+
+    document.getElementById("resultats").style.display = "block";
+}
+</script>
+
+</body>
+</html>
