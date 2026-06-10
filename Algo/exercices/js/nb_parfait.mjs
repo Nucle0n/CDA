@@ -1,16 +1,13 @@
 import {createInterface} from 'node:readline/promises';
 import {stdin as input, stdout as output} from 'node:process';
 
+
 async function main() {
 
     const sc= new createInterface({input,output});
     let nb  = await sc.question(`Entrez un nombre entier : `);
     let div = [];
-    
-    for (let i = 2; i <= nb; i++){
-
-    }
-    
+   
 
     div.push(1);
     for (let i = 2; i <= Math.sqrt(nb); i++)
