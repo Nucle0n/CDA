@@ -19,27 +19,29 @@ import {stdin as input, stdout as output} from 'node:process';
 async function main() {
 
     const sc= new createInterface({input,output});
-    let nb  = await sc.question(`Entrez un nombre entier : `);
     
+    let nb  = await sc.question(`Entrez un nombre entier : `);
+    let estpremier;
+
     if (nb < 2){
-        console.log(`${nb} n'a pas de diviseur autre 1 et lui-même !`);
+        estpremier = false;
     }
 
-    let div = [];
+    let div = 0;
 
-    for (let i = 2; i <= Math.sqrt(nb); i++)
+    for (let i = 2; i <= Math.sqrt(nb); i++){
+        
         if ( nb %i == 0){
-            div.push(i);
-
-            if ( nb / i != i){
-            div.push(nb / i);
-            }            
+            estpremier = false;
+            div = i;         
         }
-    
-    div.sort((a,b) => a - b);
+    }
 
-    for (let element of div)
-        console.log(element);
+    if (!estpremier){
+        console.log(`${nb} n'est pas un nombre premier.`);
+    } else {
+        console.log(`${nb} est un nombre premier.`);
+    }
 
     sc.close();
 }

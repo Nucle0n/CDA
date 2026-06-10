@@ -11,7 +11,7 @@ async function main() {
 
 
     // tests tableaux
-    let nb = 6;
+    let nb = parseInt(await sc.question(`Entrez un ombre entier :`));
     let tmp = 0;
     let monTab = [];
 
