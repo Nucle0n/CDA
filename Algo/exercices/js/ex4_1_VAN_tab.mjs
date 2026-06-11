@@ -23,7 +23,7 @@ async function main() {
         van += flux[i] / Math.pow(1 + taux, i+1);
     }
 
-        van += vr  / Math.pow(1 + taux, 5);
+        van += vr  / Math.pow(1 + taux, flux.length +1);
         
     console.log(`VAN = ${van.toFixed(2)} €`);
 
