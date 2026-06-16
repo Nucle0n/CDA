@@ -24,6 +24,12 @@ async function main() {
     console.log(mots);
     console.log(voyelles);
 
+    let phrase = 'Ceci est une phrase.'
+    let tab2 = phrase.split('');
+
+    for (let i = 0 ; i <= tab2.length ; i++)
+        
+
     sc.close();
 }
 
