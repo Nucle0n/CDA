@@ -42,12 +42,14 @@ lorem ipsim, ceci est un autre paragraphe. lorem ipsim, ceci est un autre paragr
 - [Google](https://www.google.com)
 
      ### Images :
-     ![ne licorne](https://static.vecteezy.com/ti/vecteur-libre/p1/26521845-licorne-logo-illustration-vecteur-conception-modele-gratuit-vectoriel.jpg){width=128 height=128}
+     ![ne licorne](https://static.vecteezy.com/ti/vecteur-libre/p1/26521845-licorne-logo-illustration-vecteur-conception-modele-gratuit-vectoriel.jpg)
+
+     <img src="https://static.vecteezy.com/ti/vecteur-libre/p1/26521845-licorne-logo-illustration-vecteur-conception-modele-gratuit-vectoriel.jpg)" width="128">
 
 ## Tableaux
 
 | Colonne 1 | Colonne 2 | Colonne 3 |
-| ---:  | ---  | :---  |
+| ---:  | ---  | ---  |
 | Item 1 | Item 2 | Item 3|
 | Toto 1 | [Toto 2](https://crm68.fr) | Toto 3|
 | Titi A | Titi B | Titi C|
@@ -74,3 +76,4 @@ if (age >= 18){
      console.log(`Vous êtes MAJEUR`.)
 }
 ```
+
