@@ -23,7 +23,7 @@ async function main() {
     while (true){   
         try {
 
-            phrase = await sc.question('Entres une phrase, terminez par un point : ');
+            phrase = await sc.question('Entrez une phrase, terminez par un point : ');
             // phrase = phrase.replaceAll(' ','');
             phrase = phrase .normalize("NFD")
                             .replace(/[\u0300-\u036f]/g, "")
@@ -37,13 +37,10 @@ async function main() {
             }
 
             if (last != '.'){
-            // point_verif = false;
             throw new Error('La phrase ne se termine pas par un point.');
             }
 
             break;
-
-            // console.log('Phrase valide.');
 
         }
         catch (erreur){
