@@ -57,10 +57,11 @@ async function main(){
     for (const key in nosFormations){
         tab.push([key,nosFormations[key]]);
     }
-
+    console.log('tab :');
     console.log(tab);
     // tab.sort((a,b) => b[1] - a[1]);
     tab.sort(([,a],[,b]) => b - a);
+    console.log('tab, après tri :');
     console.log(tab);
 
     nosFormations = {};
@@ -68,6 +69,7 @@ async function main(){
     for (let element of tab){
         nosFormations[element[0]]=element[1];
     }
+    console.log('nosFormations après tri hérité de tab :');
     console.table(nosFormations);
     // console.table(nosFormations);
     // console.log(nosFormations);
