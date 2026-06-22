@@ -12,7 +12,10 @@ import { transferableAbortController } from 'node:util';
 
 async function main(){
     const sc= new createInterface({input,output});
-
+    
+    let count = 0;
+    let gameover = false;
+    
     let answer;
 
     do {
@@ -41,16 +44,25 @@ async function main(){
     }
     console.log('');
 
-    do {
-    let lettre = await sc.question('Proposez un caractère : ');
-    lettre = lettre.toLowerCase();
-    }
+    let lettre = '';
+    while (gameover = false){
+        do {
+        lettre = await sc.question('Proposez un caractère : ');
+        lettre = lettre.toLowerCase();
+        }
+        while (lettre.length > 1 || lettre.length < 1);
 
-    for (let i = 0; i < devineTab.length; i++){
-        if (answer[answer.length - (answer.length - i)] === lettre){
-            console.log('oui');
-        } else {
-            console.log(`non`);
+        count++;
+            if (count < 6){
+                for (let i = 0; i < devineTab.length; i++){
+                    if (answer[answer.length - (answer.length - i)] === lettre){
+                        console.log('oui');
+                    } else {
+                        console.log(`non`);
+                    }
+                } 
+            } else {
+                console.log('PERDU');
         }
     }
 

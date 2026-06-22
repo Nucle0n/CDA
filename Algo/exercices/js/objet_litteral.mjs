@@ -20,6 +20,7 @@ import {stdin as input, stdout as output, sourceMapsEnabled} from 'node:process'
 async function main(){
     const sc= new createInterface({input,output});
 
+    //Objet littéral nosFormations, comme un tableau de 10 lignes, deux cellules pas lignes.
     let nosFormations = {
         ABC_I:24,
         ADRN:8,
@@ -32,15 +33,33 @@ async function main(){
         CDA:23,
         ISI:4,
     };
+    console.log('nosFormations (objet littéral :)');
+    console.table(nosFormations);
 
+    //-- Corrigé Franck --//
+    //Impossible de trier un objet littéral
+    //Pour tirer malgré tout l'objet l'itteral, on peut passer pa run tableau (tableau de tableau dans cet exemple)
+    //On créer un tableau dans lequel on entre les données contenues dans notre objet littéral
+    let monTabFormations = Object.entries(nosFormations);
+    console.log('monTabFormations :');
+    console.table(monTabFormations);
+
+    //On trie le tableau
+    monTabFormations.sort ((a,b) => b[1] - a[1]);
+
+    //On remet le contenu trié de notre tableau, donc un nouvel objet littéral qui hérite donc du trie.
+    let objetFormation = Object.fromEntries(monTabFormations);
+    console.log('objetFormations :');
+    console.table(objetFormation);
+
+    // -- Ma version --//
     let tab = [];
     for (const key in nosFormations){
         tab.push([key,nosFormations[key]]);
     }
 
-
     console.log(tab);
-    tab.sort((a,b) => b[1] - a[1]);
+    // tab.sort((a,b) => b[1] - a[1]);
     tab.sort(([,a],[,b]) => b - a);
     console.log(tab);
 
@@ -57,7 +76,7 @@ async function main(){
 }
 
 /*
-*
+* Méthode d'affichage
 */
 function afficherChaine(objet){
     let tabAffichage = '[';
