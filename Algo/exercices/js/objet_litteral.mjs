@@ -52,6 +52,12 @@ async function main(){
     console.log('objetFormations :');
     console.table(objetFormation);
 
+    //test avec la fonction afficherChaine
+    console.log('objetFormations (via méthode afficherChaine) :');
+    console.log(afficherChaine(objetFormation));
+    console.log('nosFormations (via méthode afficherChaine) :');
+    console.log(afficherChaine(nosFormations));
+
     // -- Ma version --//
     let tab = [];
     for (const key in nosFormations){

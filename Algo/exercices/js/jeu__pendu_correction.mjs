@@ -1,11 +1,3 @@
-// Exercice 3.6 : Jeu du pendu
-// L'algorithme lit un mot proposé par un premier joueur.
-// Ce mot a une longueur minimum de 5 caractères (à contrôler).
-// L'algorithme affiche ensuite le mot où toutes les lettres sauf la première et la dernière sont remplacées par un tiret.
-// Un deuxième joueur propose des lettres une à une.
-// Chaque fois que la lettre se trouve dans le mot, l'algorithme remplace les tirets qui remplaçaient cette lettre et
-// réaffiche le mot. Le second joueur a droit à un maximum de 6 essais pour retrouver toutes les lettres
-
 import {createInterface} from 'node:readline/promises';
 import {stdin as input, stdout as output} from 'node:process';
 
@@ -30,15 +22,12 @@ async function main(){
     console.clear();
     let devineTab= [];
     devineTab[0]= answer[0];
-    // console.log(devineTab);
-    
+
     for (let i= 1; i < answer.length-1; i++){
         devineTab[i]=' _';
     }
 
     devineTab[answer.length-1] = ' '+ answer[answer.length-1];
-
-    // console.log(devineTab[devineTab.length]);
 
     afficherTab(devineTab);
 
@@ -73,22 +62,6 @@ async function main(){
 
         console.log(`Nombre de tentatives restantes : ${essai}`)
         afficherTab(devineTab);
-        
-        // let _count = 0;
-
-        // for (let i = 1; i < devineTab.length -1; i++){
-        //     if (devineTab[i] === ' _'){
-        //         _count++;
-        //         console.log(_count);
-        //     }
-        // }   
-
-        // if (_count > 0){
-        //         victory = false;
-        //     } else {
-        //         victory = true;
-        //     }
-            // console.log(victory)
 
         victory = !devineTab.includes(' _');
     }

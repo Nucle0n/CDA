@@ -29,13 +29,13 @@ async function main(){
             if (answer < rng && answer >= min){
                 min = answer;
                 throw new Error(`Trop petit !`);
-            } else if (answer < min && answer < rng){
+            } else if (answer < min){
                 throw new Error(`Erreur : Le nombre proposé est inférieur au minimum !`);
             }
             if (answer > rng && answer <= max){
                 max = answer;
                 throw new Error(`Trop grand !`);
-            } else if (answer > max && answer > rng){
+            } else if (answer > max){
                 throw new Error(`Erreur : Le nombre proposé est supérieur au maximum !`);
             }
             break;
