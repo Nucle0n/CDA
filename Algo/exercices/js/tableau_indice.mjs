@@ -53,6 +53,11 @@ async function main(){
 
     console.table(tab);
 
+    for (let i = 0; i < tab.length; i++){
+        if (tab[i][1] != 0){
+            console.log(`La lettre ${tab[i][0]} est présente : ${tab[i][1]} fois`);
+        }
+    }
 
     sc.close();
 }
