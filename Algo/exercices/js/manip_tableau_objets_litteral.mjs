@@ -20,26 +20,54 @@
 // year_of_birth:1965 
 // }
  
- import {createInterface} from 'node:readline/promises';
-import {stdin as input, stdout as output} from 'node:process';
 import fs from 'node:fs/promises';
 
 
 async function main(){
-    const sc= new createInterface({input,output});
-    const contenu = await fs.readFile('./CDA/Algo/exercices/js/employees.json', 'utf-8');
+    const contenu = await fs.readFile('./employees.json', 'utf-8');
 
-    const json = JSON.parse(contenu);
+
+
+    const source = JSON.parse(contenu);
 
     // console.log(contenu);
-    console.log(typeof contenu);
-    console.log(contenu.length);
-    console.log(json.data[0]);
-    console.table(json.data);
+    // console.log(typeof contenu);
+    // console.log(contenu.length);
+    // console.log(json.data[0]);
+    // console.table(json.data);
     
-    
+    const sourceTab = source.data;
+    console.table(sourceTab);
 
-    sc.close();
+    const newTab = [];
+    
+    // console.log(tab[4].employee_age);
+    
+    for (const element of sourceTab){
+        const newObj = {
+            id:element.id,
+            'Prénom et nom':element.employee_name,
+            Email:emailGen(element.employee_name),
+            'Salaire mensuel':(element.employee_salary/12).toFixed(2)+'€',
+            'Année de naissance':new Date().getFullYear()-element.employee_age,
+        };
+        newTab.push(newObj);
+    }
+
+    console.table(newTab);
+
 }
+
+function emailGen(name){
+    const tableau = name.toLowerCase()
+                        .split(' ');
+    let mail = tableau[0][0] + '.' + tableau[1] + '@gmail.com';
+    return mail;
+}
+
+// const year_of_birth = new Date().getFullYear()-json.employee_age;
+// const year = new Date().getFullYear();
+// console.log(year);
+
 
 await main();
