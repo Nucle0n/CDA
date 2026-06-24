@@ -30,9 +30,9 @@ async function main(){
     //Formatage dee la phrase pour ne garder que les lettres (retrait des accents, ponctuation, symboles)
     let totalChar = phrase.length;
     phrase = phrase .normalize("NFD")
-                            .replace(/[\u0300-\u036f]/g, "")
-                            .replace(/[^a-zA-Z]/g, "")
-                            .toLowerCase();
+                    .replace(/[\u0300-\u036f]/g, "")
+                    .replace(/[^a-zA-Z]/g, "")
+                    .toLowerCase();
 
     charCount = phrase.length;              
     let tabPhrase = phrase.split('');

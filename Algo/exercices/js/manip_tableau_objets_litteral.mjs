@@ -27,7 +27,7 @@ import fs from 'node:fs/promises';
 
 async function main(){
     const sc= new createInterface({input,output});
-    const contenu = await fs.readFile('./Algo/exercices/js/employees.json', 'utf-8');
+    const contenu = await fs.readFile('./CDA/Algo/exercices/js/employees.json', 'utf-8');
 
     const json = JSON.parse(contenu);
 
