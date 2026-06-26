@@ -4,34 +4,50 @@ import {createInterface} from 'node:readline/promises';
 import {stdin as input, stdout as output} from 'node:process';
 import { table } from 'node:console';
 
+// function affichageG(tableau){
+//     console.log();
+//     const hauteur = Math.max(...tableau.flat())-1;
+//     for (let i = hauteur; i >= 0; i--){
+//         let ligne = '';
+//         for (let j = 0; j < 3; j++){
+//             ligne += (tableau[j][i] ?? '∙') +' ';
+//         }
+//         console.log(ligne);
+//     }
+// }
+
 function affichage(tableau){
+    
     console.log();
+    console.log(compteur++);
+    
+    
     const hauteur = Math.max(...tableau.flat())-1;
     for (let i = hauteur; i >= 0; i--){
         let ligne = '';
         for (let j = 0; j < 3; j++){
-            ligne += (tableau[j][i] ?? '.') +' ';
+            ligne += (tableau[j][i] ?? '░') +'░';
         }
         console.log(ligne);
     }
 }
 
-function deplacement(tableau, dest, tour, niv){
+function deplacement(tableau, destination, tour, niv){
      
     // if (tableau[tour][niv+1] != undefined){
     if (tableau[tour][niv+1]){
-        const degage = 3 - (dest + tour);
+        const degage = 3 - (destination + tour);
         deplacement(tableau, degage, tour, niv+1);
     }
     const valeur = tableau[tour][niv];
 
     affichage(tableau);
-    tableau[dest].push(valeur);
+    tableau[destination].push(valeur);
     tableau[tour].pop();
 
     if ( valeur > 1){
         const inferieur = premier_inf(tableau, valeur);
-        deplacement(tableau,dest,inferieur.tour,inferieur.niv); 
+        deplacement(tableau,destination,inferieur.tour,inferieur.niv); 
     }
 
 }
@@ -74,9 +90,10 @@ async function main(){
     // console.table(C);
 
     deplacement(tabGen,2,0,0);
-    affichage(tabGen);
+    affichage(tabGen,compteur);
 
     sc.close();
 }
 
+let compteur = 0;
 await main();
