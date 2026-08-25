@@ -1,0 +1,12 @@
+COLOR_RED="\033[31;1;4m"
+COLOR_RST="\033[0m"
+
+main()
+{
+	echo -ne $COLOR_RED
+	echo -n $1
+	echo -ne $COLOR_RST
+}
+
+main $@
+

@@ -1,0 +1,14 @@
+TEST="blabla"
+HEIGHT=$(tput lines)
+WIDTH=$(tput cols)
+
+main()
+{
+    clear
+    echo $TEST
+    echo $LINES
+    echo $COLUMNS
+    
+}
+
+main
