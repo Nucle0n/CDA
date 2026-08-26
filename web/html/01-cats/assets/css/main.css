@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EBF0F0;
+}
+
+header {
+    display: flex;
+    height: 100px;
+    
+    justify-content: center; /* permet d'aligner horizontalement (car row par défaut) */
+    align-items: center; /* permet d'aligner verticalement */
+    
+    color: #FFFFFF; /* couleur du texte */
+    background-color: #E64B3C; /* couleur du fond */
+}
+
+article {
+    margin: 0;
+    max-width: 450px; /* un article ne fera jamais plus de 450px de large, mais peut faire moins */
+    
+    background-color: #FFFFFF;
+    
+}
+
+article img {
+    width: 100%; /* l'image fait 100% de la largeur d'un sectionnement article */
+}
+
+article h2 {
+    color: #E64B3C;
+}
+
+article h2,
+article p {
+    margin: 5px 0;
+    padding: 0 10px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px; /* espacement entre les cartes */
+
+    justify-content: center;
+    padding-top: 25px;
+    margin-inline: 15%; /* permet de tjrs garder une marge d'au moins 15% entre les cartes et le bord de la fenêtre */
+}
