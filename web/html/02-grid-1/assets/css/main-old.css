@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+}
+
+h1,
+aside,
+nav,
+article,
+footer {
+    text-align: left;
+    padding-left: 10px;
+    background-color: #BDCCFC;
+}
+
+body {
+    min-height: 100vh;
+}
+body,
+body > header {
+    display: grid;
+    margin: 2px;
+}
+
+header,
+body,
+article div,
+.principal {
+    gap: 5px;
+}
+
+.principal
+{
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.principal h2 {
+    flex: 1;
+}
+
+.principal div {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: center;
+    flex: 2;
+}
+
+.principal section {
+    text-align: left;
+    padding-left: 4px;
+    background-color: #FFFFFF;
+}
+
+.principal section h3,
+.principal section p {
+    flex: 1;
+}
