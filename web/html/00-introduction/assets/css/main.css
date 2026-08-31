@@ -157,6 +157,11 @@ tbody tr:nth-child(odd) {
     justify-content: center;
 }
 
+/* .galerie {
+    display: flex;
+    flex-direction: row-reverse;
+} */
+
 .img_gal {
     width: 230px;
     height: 150px;

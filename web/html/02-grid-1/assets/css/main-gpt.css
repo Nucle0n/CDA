@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    padding: 3px;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "nav    main"
+        "nav    footer";
+    gap: 3px;
+
+    background: #fff;
+    font-family: serif;
+}
+
+header,
+nav,
+main,
+footer,
+article,
+aside {
+    background-color: #BBCCFF;
+}
+
+header {
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: 1fr 15%;
+}
+
+header h1,
+header aside {
+    padding: 12px;
+}
+
+header aside {
+    border-left: 3px solid #fff;
+}
+
+nav {
+    grid-area: nav;
+    padding: 12px;
+}
+
+main {
+    grid-area: main;
+    min-width: 0;
+}
+
+.principal {
+    height: 100%;
+    padding: 30px 30px 30px 10%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 3px;
+}
+
+.principal > h2 {
+    flex: 0 0 100%;
+    margin: 0 0 45px;
+    transform: translateX(-8%);
+}
+
+.principal > section {
+    flex: 1 1 calc(50% - 3px);
+    min-width: 0;
+    padding: 12px;
+    background-color: #fff;
+}
+
+section h3 {
+    margin: 0 0 8px;
+}
+
+footer {
+    grid-area: footer;
+    padding: 10px;
+}
+
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    header aside {
+        border-left: 0;
+        border-top: 3px solid #fff;
+    }
+
+    .principal {
+        padding: 12px;
+    }
+
+    .principal > section {
+        flex-basis: 100%;
+    }
+}

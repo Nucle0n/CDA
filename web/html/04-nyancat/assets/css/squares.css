@@ -1,0 +1,63 @@
+:root {
+    --noir: #000;
+    --rouge: #F00;
+}
+
+.B, .N, .R {
+    width: 75px;
+    height: 75px;
+}
+
+.B {
+    background-color: white;
+    /* grid-area: B; */
+}
+
+.N {
+    background-color: var(--noir);
+    /* grid-area: N; */
+}
+
+.R {
+    background-color: var(--rouge);
+    grid-area: R;
+}
+
+.l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9  {
+    display: flex;
+    /* flex-direction: row; */
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* .coeur {
+    display: grid;
+    
+    grid-template-columns: repeat(9, 75px);
+    grid-template-rows: repeat(9, 75px);
+
+    grid-template-areas: 
+    ". . N N . N N . ."
+    ". N R R N R R N ."
+    "N R . R R R R R N"
+    "N R R R R R R R N"
+    "N R R R R R R R N"
+    ". N R R R R R N ."
+    ". . N R R R N . ."
+    ". . . N R N . . ."
+    ". . . . N . . . .";
+} */
+
+/* section {
+    display: flex;
+} */

@@ -1,43 +1,52 @@
-body {
+:root {
+    --orange: #E64B3C;
+}
+
+* {
     margin: 0;
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #EBF0F0;
 }
 
 header {
-    display: flex;
-    height: 100px;
-    
-    justify-content: center; /* permet d'aligner horizontalement (car row par défaut) */
-    align-items: center; /* permet d'aligner verticalement */
+    padding: 25px 0;
     
     color: #FFFFFF; /* couleur du texte */
-    background-color: #E64B3C; /* couleur du fond */
+    background-color: var(--orange) /* couleur du fond */
 }
 
-article {
-    margin: 0;
-    max-width: 450px; /* un article ne fera jamais plus de 450px de large, mais peut faire moins */
+header h1 {
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 450px; /* un .card ne fera jamais plus de 450px de large, mais peut faire moins */
     
-    background-color: #FFFFFF;
+    background-color: white;
     
 }
 
-article img {
-    width: 100%; /* l'image fait 100% de la largeur d'un sectionnement article */
+.card img {
+    width: 100%; /* l'image fait 100% de la largeur d'un sectionnement .card */
+    order: -1;
 }
 
-article h2 {
-    color: #E64B3C;
+.card h2 {
+    color: var(--orange);
 }
 
-article h2,
-article p {
+.card h2,
+.card p {
     margin: 5px 0;
     padding: 0 10px;
 }
 
-.cards {
+main {
     display: flex;
     gap: 20px; /* espacement entre les cartes */
 
