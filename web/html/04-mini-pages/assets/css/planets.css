@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    background-image: url("../img/planets/css-16-bg.webp");
+    background-repeat: repeat;
+    background-size: 50%;
+    min-height: 90vh;
+    align-items: center;
+}
+
+article {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.planet1 {
+    width: 20%;
+}
+
+.planet2 {
+    width: 30%;
+}
+
+.planet3 {
+    width: 50%;
+}
