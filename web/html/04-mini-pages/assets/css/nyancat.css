@@ -6,17 +6,11 @@ body {
     background-color: var(--bgcolor);
 }
 .nyanbox {
-    width: 100;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
 }
-
-h1 {
-    text-align: center;
-}
-
 
 .nyanbox img {
     border: 4px solid white;
