@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    height: 100vh;
+    background-image: url(../img/space/snow-black.gif);
+    justify-content: center;
+}
+
+main {
+    /* height: 100%; */
+    width: 40%;
+    display: flex;
+    /* align-items: end; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+div {
+    width: 100%;
+    border-radius: 100%;
+    background: #FFF;
+}
+
+#p1 {
+    width: 12%;
+    aspect-ratio: 1;
+    position: relative;
+    top : 100px;
+}
+
+#p2 {
+    width: 20%;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+#p3 {
+    width: 6%;
+    aspect-ratio: 1;
+    position: relative;
+    bottom: 50px;
+}
