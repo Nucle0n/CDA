@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <rect x="0" y="0" width="180" height="60" fill="#FCD116"/>
+    <rect x="0" y="60" width="180" height="30" fill="#003893"/>
+    <rect x="0" y="90" width="180" height="30" fill="#CE1126"/>
+    <rect x="0" y="120" width="180" height="28" fill="white"/>
+    
+    <text x="90" y="132" text-anchor="middle" font-size="7" font-weight="bold" fill="black">Colombie</text>
+    <line x1="0" y1="138" x2="180" y2="138" stroke="gray" stroke-width="0.4"/>
+    <text x="90" y="146" text-anchor="middle" font-size="3.2" font-family="serif" fill="black">
+        <tspan font-weight="bold">Capitale :</tspan>
+        <tspan> Bogota - </tspan>
+
+        <tspan font-weight="bold">Indépendance :</tspan>
+        <tspan> 7 août 1819 - </tspan>
+
+        <tspan font-weight="bold">Population :</tspan>
+        <tspan> 49 084 841 habitants</tspan>
+    </text>
+
+    <rect x="0" y="0" width="180" height="148" fill="none" stroke="black" stroke-width="0.4"/>
+</svg>
