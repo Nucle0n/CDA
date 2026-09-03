@@ -1,0 +1,79 @@
+:root {
+    --bleu: #008cba;
+    --gris: #555555;
+    --vert: #4CAF50;
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+    justify-content: start;
+    gap: 20px;
+    
+}
+
+header span {
+    font-style: italic;
+    background-color: #DDD;
+    border-radius: 6px;
+    padding: 0 8px;
+}
+
+h1 {
+    font-size: 35px;
+    color: var(--bleu);
+}
+
+body {
+    font-family: monospace;
+}
+
+section {
+    display: flex;
+    gap: 10px;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    padding: 0px 30px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th {
+    background-color: #DDD;
+}
+
+.nom {
+    background-color: var(--bleu);
+    color: white;
+}
+
+.s_titre {
+    background-color: var(--vert);
+    color: white;
+    padding: 0 5px;
+}
+
+#pop {
+    background-color: var(--bleu);
+    color: white;
+}
+
+#most_watched {
+    background-color: var(--vert);
+    color: white;
+}
+
+#grow {
+    background-color: var(--gris);
+    color: white;
+}
