@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: #CCCC33;
+    color: white;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-size: xx-large;
+}
+
+.principal {
+    display: grid;
+    gap: 4px;
+}
+
+#s1 {
+    width : 100%
+}
+
+#s2 {
+    
+}

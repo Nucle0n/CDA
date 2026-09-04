@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: #CCCC33;
+    color: white;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-size: xx-large;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 4px;
+    grid-template-areas: 
+    "s1 s1 s1 s1"
+    "s2 s3 s4 s4"
+    "s2 s5 s5 s6"
+    "s2 s7 s8 s9"
+    "s2 s10 s10 s10";
+
+    height: 100%;
+}
+
+section {
+    padding-left: 3px;
+}
+
+#s1 {
+    grid-area: s1;
+}
+
+#s2 {
+    grid-area: s2;
+}
+
+#s3 {
+    grid-area: s3;
+}
+
+#s4 {
+    grid-area: s4;
+}
+
+#s5 {
+    grid-area: s5;
+}
+
+#s6 {
+    grid-area: s6;
+}
+
+#s7 {
+    grid-area: s7;
+}
+
+#s8 {
+    grid-area: s8;
+}
+
+#s9 {
+    grid-area: s9;
+}
+
+#s10 {
+    grid-area: s10;
+}
