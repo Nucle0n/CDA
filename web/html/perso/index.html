@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page pour m'entraine en html">    
+    <title>crash test</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" href="assets/img/fav.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Page 1</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <th scope="col">colonne 1</th>
+                <th scope="col">colonne 2</th>
+                <th scope="col" colspan="2">colonne 3</th>
+                <th scope="col">colonne 4</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">val 1</td>
+                    <td rowspan="2">val 2</td>
+                    <td colspan="2">valeur complexe</td>
+                    <td rowspan="2">val 3</td>
+                </tr>
+                <tr>
+                    <td>test 1</td>
+                    <td>test 2</td>
+                </tr>
+                <tr>
+                    <td>ok</td>
+                    <td>ok</td>
+                    <td colspan="2">ok</td>
+                    <td>ok</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
