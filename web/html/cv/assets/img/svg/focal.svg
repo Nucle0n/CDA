@@ -1,0 +1,127 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" width="520" height="520">
+	<style>
+		.s0 { fill: #000000 } 
+	</style>
+	<g>
+		<path id="major" fill-rule="evenodd" class="s0" d="m264.33 0v31.2h-8.66v-31.2z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m270.19 15.8l5.2 0.27-0.82 15.58-5.19-0.27z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m282.96 16.67l5.17 0.54-1.63 15.52-5.17-0.55z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m295.66 18.2l5.14 0.82-2.44 15.4-5.14-0.81z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m308.27 20.4l5.09 1.08-3.25 15.26-5.08-1.08z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m320.74 23.25l5.03 1.35-4.04 15.07-5.02-1.35z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m333.05 26.76l4.95 1.61-4.82 14.83-4.95-1.61z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m345.16 30.9l4.85 1.86-5.59 14.57-4.85-1.86z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m357.03 35.67l4.75 2.12-6.34 14.25-4.75-2.12z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m368.64 41.06l4.63 2.36-7.08 13.9-4.63-2.36z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m379.95 47.04l4.5 2.6-7.8 13.51-4.5-2.6z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m390.93 53.61l4.36 2.83-8.5 13.09-4.36-2.83z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m401.55 60.75l4.21 3.05-9.17 12.63-4.21-3.06z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m411.79 68.43l4.04 3.27-9.82 12.13-4.04-3.28z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m421.6 76.64l3.87 3.48-10.44 11.59-3.87-3.48z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m430.98 85.34l3.68 3.68-11.04 11.03-3.67-3.67z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m439.88 94.53l3.48 3.87-11.59 10.44-3.48-3.87z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m448.3 104.17l3.27 4.04-12.12 9.82-3.28-4.04z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m456.2 114.24l3.05 4.21-12.62 9.17-3.06-4.21z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m463.56 124.71l2.83 4.36-13.09 8.5-2.83-4.36z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m470.36 135.55l2.6 4.5-13.51 7.8-2.6-4.5z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m476.58 146.73l2.36 4.63-13.9 7.08-2.36-4.63z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m482.21 158.22l2.12 4.75-14.25 6.34-2.12-4.75z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m487.24 169.99l1.86 4.85-14.57 5.59-1.86-4.85z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m491.63 182l1.61 4.95-14.83 4.82-1.61-4.95z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m495.4 194.23l1.35 5.03-15.07 4.03-1.35-5.02z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m498.52 206.64l1.08 5.09-15.26 3.24-1.08-5.08z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m500.98 219.2l0.82 5.14-15.41 2.44-0.81-5.14z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m502.79 231.87l0.54 5.17-15.51 1.63-0.55-5.17z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m503.93 244.61l0.27 5.2-15.58 0.81-0.27-5.19z"/>
+		<path id="major" fill-rule="evenodd" class="s0" d="m520 255.67v8.66h-31.2v-8.66z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m504.2 270.19l-0.27 5.2-15.58-0.82 0.27-5.19z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m503.33 282.96l-0.54 5.17-15.52-1.63 0.55-5.17z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m501.8 295.66l-0.82 5.14-15.4-2.44 0.81-5.14z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m499.6 308.27l-1.08 5.09-15.26-3.25 1.08-5.08z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m496.75 320.74l-1.35 5.03-15.07-4.04 1.35-5.02z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m493.24 333.05l-1.61 4.95-14.83-4.82 1.61-4.95z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m489.1 345.16l-1.86 4.85-14.57-5.59 1.86-4.85z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m484.33 357.03l-2.12 4.75-14.25-6.34 2.12-4.75z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m478.94 368.64l-2.36 4.63-13.9-7.08 2.36-4.63z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m472.96 379.95l-2.6 4.5-13.51-7.8 2.6-4.5z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m466.39 390.93l-2.83 4.36-13.09-8.5 2.83-4.36z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m459.25 401.55l-3.05 4.21-12.63-9.17 3.06-4.21z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m451.57 411.79l-3.27 4.04-12.13-9.82 3.28-4.04z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m443.36 421.6l-3.48 3.87-11.59-10.44 3.48-3.87z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m434.66 430.98l-3.68 3.68-11.03-11.04 3.67-3.67z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m425.47 439.88l-3.87 3.48-10.44-11.59 3.87-3.48z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m415.83 448.3l-4.04 3.27-9.82-12.12 4.04-3.28z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m405.76 456.2l-4.21 3.05-9.17-12.62 4.21-3.06z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m395.29 463.56l-4.36 2.83-8.5-13.09 4.36-2.83z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m384.45 470.36l-4.5 2.6-7.8-13.51 4.5-2.6z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m373.27 476.58l-4.63 2.36-7.08-13.9 4.63-2.36z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m361.78 482.21l-4.75 2.12-6.34-14.25 4.75-2.12z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m350.01 487.24l-4.85 1.86-5.59-14.57 4.85-1.86z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m338 491.63l-4.95 1.61-4.82-14.83 4.95-1.61z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m325.77 495.4l-5.03 1.35-4.03-15.07 5.02-1.35z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m313.36 498.52l-5.09 1.08-3.24-15.26 5.08-1.08z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m300.8 500.98l-5.14 0.82-2.44-15.41 5.14-0.81z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m288.13 502.79l-5.17 0.54-1.63-15.51 5.17-0.55z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m275.39 503.93l-5.2 0.27-0.81-15.58 5.19-0.27z"/>
+		<path id="major" fill-rule="evenodd" class="s0" d="m264.33 488.8v31.2h-8.66v-31.2z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m249.81 504.2l-5.2-0.27 0.82-15.58 5.19 0.27z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m237.04 503.33l-5.17-0.54 1.63-15.52 5.17 0.55z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m224.34 501.8l-5.14-0.82 2.44-15.4 5.14 0.81z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m211.73 499.6l-5.09-1.08 3.25-15.26 5.08 1.08z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m199.26 496.75l-5.03-1.35 4.04-15.07 5.02 1.35z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m186.95 493.24l-4.95-1.61 4.82-14.83 4.95 1.61z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m174.84 489.1l-4.85-1.86 5.59-14.57 4.85 1.86z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m162.97 484.33l-4.75-2.12 6.34-14.25 4.75 2.12z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m151.36 478.94l-4.63-2.36 7.08-13.9 4.63 2.36z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m140.05 472.96l-4.5-2.6 7.8-13.51 4.5 2.6z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m129.07 466.39l-4.36-2.83 8.5-13.09 4.36 2.83z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m118.45 459.25l-4.21-3.05 9.17-12.63 4.21 3.06z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m108.21 451.57l-4.04-3.27 9.82-12.13 4.04 3.28z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m98.4 443.36l-3.87-3.48 10.44-11.59 3.87 3.48z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m89.02 434.66l-3.68-3.68 11.04-11.03 3.67 3.67z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m80.12 425.47l-3.48-3.87 11.59-10.44 3.48 3.87z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m71.7 415.83l-3.27-4.04 12.12-9.82 3.28 4.04z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m63.8 405.76l-3.05-4.21 12.62-9.17 3.06 4.21z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m56.44 395.29l-2.83-4.36 13.09-8.5 2.83 4.36z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m49.64 384.45l-2.6-4.5 13.51-7.8 2.6 4.5z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m43.42 373.27l-2.36-4.63 13.9-7.08 2.36 4.63z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m37.79 361.78l-2.12-4.75 14.25-6.34 2.12 4.75z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m32.76 350.01l-1.86-4.85 14.57-5.59 1.86 4.85z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m28.37 338l-1.61-4.95 14.83-4.82 1.61 4.95z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m24.6 325.77l-1.35-5.03 15.07-4.03 1.35 5.02z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m21.48 313.36l-1.08-5.09 15.26-3.24 1.08 5.08z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m19.02 300.8l-0.82-5.14 15.41-2.44 0.81 5.14z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m17.21 288.13l-0.54-5.17 15.51-1.63 0.55 5.17z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m16.07 275.39l-0.27-5.2 15.58-0.81 0.27 5.19z"/>
+		<path id="major" fill-rule="evenodd" class="s0" d="m0 264.33v-8.66h31.2v8.66z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m15.8 249.81l0.27-5.2 15.58 0.82-0.27 5.19z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m16.67 237.04l0.54-5.17 15.52 1.63-0.55 5.17z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m18.2 224.34l0.82-5.14 15.4 2.44-0.81 5.14z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m20.4 211.73l1.08-5.09 15.26 3.25-1.08 5.08z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m23.25 199.26l1.35-5.03 15.07 4.04-1.35 5.02z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m26.76 186.95l1.61-4.95 14.83 4.82-1.61 4.95z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m30.9 174.84l1.86-4.85 14.57 5.59-1.86 4.85z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m35.67 162.97l2.12-4.75 14.25 6.34-2.12 4.75z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m41.06 151.36l2.36-4.63 13.9 7.08-2.36 4.63z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m47.04 140.05l2.6-4.5 13.51 7.8-2.6 4.5z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m53.61 129.07l2.83-4.36 13.09 8.5-2.83 4.36z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m60.75 118.45l3.05-4.21 12.63 9.17-3.06 4.21z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m68.43 108.21l3.27-4.04 12.13 9.82-3.28 4.04z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m76.64 98.4l3.48-3.87 11.59 10.44-3.48 3.87z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m85.34 89.02l3.68-3.68 11.03 11.04-3.67 3.67z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m94.53 80.12l3.87-3.48 10.44 11.59-3.87 3.48z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m104.17 71.7l4.04-3.27 9.82 12.12-4.04 3.28z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m114.24 63.8l4.21-3.05 9.17 12.62-4.21 3.06z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m124.71 56.44l4.36-2.83 8.5 13.09-4.36 2.83z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m135.55 49.64l4.5-2.6 7.8 13.51-4.5 2.6z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m146.73 43.42l4.63-2.36 7.08 13.9-4.63 2.36z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m158.22 37.79l4.75-2.12 6.34 14.25-4.75 2.12z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m169.99 32.76l4.85-1.86 5.59 14.57-4.85 1.86z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m182 28.37l4.95-1.61 4.82 14.83-4.95 1.61z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m194.23 24.6l5.03-1.35 4.03 15.07-5.02 1.35z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m206.64 21.48l5.09-1.08 3.24 15.26-5.08 1.08z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m219.2 19.02l5.14-0.82 2.44 15.41-5.14 0.81z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m231.87 17.21l5.17-0.54 1.63 15.51-5.17 0.55z"/>
+		<path id="tick" fill-rule="evenodd" class="s0" d="m244.61 16.07l5.2-0.27 0.81 15.58-5.19 0.27z"/>
+	</g>
+</svg>
