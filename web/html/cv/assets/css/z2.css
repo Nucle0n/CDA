@@ -36,9 +36,10 @@
 }
 
 .job {
+
     font-size: 0.85rem;
     margin: 0px;
-    transform: scaleY(50);
+    /* transform: scaleY(50); */
 }
 
 body {
