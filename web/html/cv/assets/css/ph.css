@@ -1,0 +1,46 @@
+:root {
+    /* colors */
+    --bg-tmp: #888;
+    --bd-tmp: #000;
+    --txt-color: #FFF;
+}
+
+.header  {
+    position: relative;
+    z-index: 2;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    background-color: var(--bg-tmp);
+    color: var(--txt-color);
+
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid var(--bd-tmp);
+
+    padding: 10px;
+}
+
+.nav {
+    padding: 0;
+    overflow: hidden;
+    transition: height 0.5s linear;
+    /* border: none; */
+}
+
+.nav-inner {
+    padding: 10px;
+}
+
+.nav-content {
+    transition: transform 0.5s linear;
+}
+
+.nav.collapsed .nav-content {
+    transform: translateY(-100%);
+}
