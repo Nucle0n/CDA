@@ -1,9 +1,11 @@
 :root {
     /* colors */
-    --bg-tmp: #272727;
-    --bd-tmp: #000;
+    --bg-global: #000;
     --txt-color: #FFF;
+    --bg-box: #f1f5f6;
+    --txt-box: #4d4d4d;
     --theme-color: #00f8a5;
+    --nav-trans-time: 0.15s;
 }
 
 * {
@@ -11,23 +13,43 @@
     /* border: 1px solid black; */
 }
 
-/* html {
-    font-size: 1.3rem;
-} */
-
 .header {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: start;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+
     max-height: 100px;
     max-width: 100%;
 
-
-    position: relative;
     z-index: 2;
+    position: relative;
+
+    border: 2px solid black;
+    border-top-left-radius: 20px;
+    clip-path: polygon(0 0,
+            /* A */
+            calc(100% - 250px) 0,
+            /* B */
+            calc(100% - 235px) 15px,
+            /* C */
+            calc(100% - 6px) 15px,
+            /* D */
+            100% 21px,
+            /* E */
+            100% calc(100% - 6px),
+            /* F */
+            calc(100% - 6px) 100%,
+            /* G */
+            6px 100%,
+            /* H */
+            0 calc(100% - 6px)
+            /* I */
+        );
+
+    /* margin: 10px; */
+    /* gap: 15px; */
 }
 
 .pp {
@@ -36,89 +58,172 @@
 }
 
 .job {
-
     font-size: 0.85rem;
+
     margin: 0px;
-    /* transform: scaleY(50); */
 }
 
 body {
-
     display: flex;
     flex-direction: column;
     justify-self: center;
+
+    background-color: var(--bg-global);
+
     min-height: 100vh;
     min-width: 410px;
     max-width: 600px;
-    margin: 0;
-    /* width: 50%; */
 
+    margin: 0;
     /* gap: 5px; */
 }
 
 .box {
-    background-color: var(--bg-tmp);
-    color: var(--txt-color);
+    background-color: var(--bg-box);
+    color: var(--txt-box);
 
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-bottom: 5px solid white;
-    border-top: 0;
+    /* border-bottom: 5px solid white;
+    border-top: 0; */
     /* border-radius: 15px; */
 
     padding: 10px;
 }
 
 .nav {
+    background-color: var(--bg-global);
+    color: var(--bg-box);
     display: flex;
     position: relative;
     z-index: 2;
+
+    clip-path: polygon(6px 0,
+            calc(100% - 6px) 0,
+            100% 6px,
+            100% 100%,
+            0 100%,
+            0 6px);
+
     padding: 0;
 }
 
 .nav__ul {
-    list-style: none;
-    margin: 40px auto 8px;
     display: flex;
     justify-content: center;
+
+    list-style: none;
+
+    margin: 40px auto 8px;
     padding: 0;
     /* gap: calc(6px + 2vw); */
     gap: 8px;
+
+    li {
+        position: relative;
+    }
+
+    li::after {
+        /*-------------------*/
+        /* Barres lumineuses */
+        /*-------------------*/
+        content: "";
+        position: absolute;
+
+        left: 50%;
+
+        width: 0;
+        height: 2px;
+
+        transform: translateX(-50%);
+        bottom: -8px;
+
+        background: var(--theme-color);
+
+        box-shadow:
+            0 0 5px var(--theme-color),
+            0 0 12px var(--theme-color),
+            0 0 20px var(--theme-color);
+
+        transition: width var(--nav-trans-time) ease;
+    }
+
+    li:hover::after {
+        width: 100%;
+    }
 }
 
-.menu {
-    margin: 0;
-    text-decoration: none;
-    position: relative;
-    padding-top: 36px;
-
+.nav__ul .menu {
     color: currentColor;
 
+    text-decoration: none;
+    position: relative;
+
     font-size: 0.75rem;
+
+    margin: 0;
+    padding-top: 36px;
+
+    transition:
+        color var(--nav-trans-time) ease,
+        text-shadow var(--nav-trans-time) ease;
 }
 
+/* --------------------------------- */
 /* Élément virtuel réservé à l'icône */
+/* --------------------------------- */
 .menu::before {
-    content: ""; 
+    background-color: currentColor;
 
+    content: "";
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
 
     width: 32px;
     height: 32px;
 
-    background-color: currentColor;
-
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
+
+    transform: translateX(-50%);
 }
 
- .menu:hover {
-        color: rgb(0, 255, 136);
- }
+/*----------------------------------*/
+/* Halo lumineux derrière le bouton */
+/*----------------------------------*/
+.menu::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: -8px;
+
+    width: 120%;
+    height: 55px;
+
+    transform: translateX(-50%);
+
+    background: radial-gradient(ellipse at bottom,
+            rgb(0 248 165 / 0.35) 0%,
+            rgb(0 248 165 / 0.15) 35%,
+            transparent 70%);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.25s ease;
+}
+
+.menu:hover {
+    color: var(--theme-color);
+    text-shadow: 0 0 8px rgb(0, 248, 165 / 0.6);
+}
+
+.menu:hover::after {
+    opacity: 1;
+}
 
 
 .profil,
