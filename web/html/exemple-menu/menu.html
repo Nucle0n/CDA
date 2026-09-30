@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="./assets/css/menu.css">
+    <script type="module">
+        const menuItems = document.getElementById("menuItems");
+        const menuBurger = document.getElementById('menuBurger');
+        menuBurger.addEventListener('click', () => {
+                menuItems.classList.toggle('active');
+                menuBurger.textContent = menuItems.classList.contains('active') ? "MENU" : "☰";
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Mon Super Menu</h1>
+        <nav class="nav__menu" role="navigation">
+            <!-- role : navigation pour spécifier qu'il s'agit du menu de navigation principal (accessibilité) -->
+            <a id="menuBurger" href="#">☰</a>
+            <ul id="menuItems">
+                <li>
+                    <a href="#">Accueil</a>
+                    <!-- <ul>
+                        <li>
+                            <a href="#">Page A.1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page A.2</a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li>
+                    <a href="#">Page 1</a>
+                </li>
+                <li>
+                    <a href="#">Page 2</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Titre de la page</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel facilis doloremque, iusto laborum dignissimos velit! Incidunt explicabo tempore dolor sapiente quod ex, quisquam voluptas impedit. Laudantium tempore unde rem itaque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel facilis doloremque, iusto laborum dignissimos velit! Incidunt explicabo tempore dolor sapiente quod ex, quisquam voluptas impedit. Laudantium tempore unde rem itaque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel facilis doloremque, iusto laborum dignissimos velit! Incidunt explicabo tempore dolor sapiente quod ex, quisquam voluptas impedit. Laudantium tempore unde rem itaque.</p>
+    </main>
+</body>
+
+</html>

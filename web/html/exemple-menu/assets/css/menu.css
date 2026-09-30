@@ -1,0 +1,75 @@
+:root {
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body > header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* nav[role="navigation"] {
+
+} */
+
+/* Cible toutes le sbalises ul dans nav__menu */
+.nav__menu {
+    position: fixed;
+    background: #ff0000dd;
+    right: .2rem;
+}
+
+/* Cible les enfants directs */
+.nav__menu > ul {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cible toutesles balises a dans nav__menu */
+.nav__menu a {
+    display: block;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border: 1px solid black;
+    color: yellow;
+}
+
+#menuItems.active {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+#menuBurger {
+    font-weight: bolder;
+    text-align: right;
+    color: blue;
+}
+
+/* .nav__menu ~ ul {
+
+}
+
+
+.nav__menu + ul {
+
+} */
+
+/* On cible tous les périphériques ET ceux qui avec un écran de au moins 360px */
+@media all and (min-width: 1024px) {
+    .nav__menu > ul {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
+    #menuBurger {
+        display: none;
+    }
+}
