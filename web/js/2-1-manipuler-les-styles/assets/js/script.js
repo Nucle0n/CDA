@@ -1,44 +1,29 @@
-const zoneSize = document.querySelector("#txtSize");
-const btnIncrease = document.getElementById("btnIncrease");
-const btnDecrease = document.getElementById("btnDecrease");
-const txt = document.querySelector("p");
+const plus = document.getElementById("btnIncrease");
+const minus = document.querySelector("#btnDecrease");
+const input = document.getElementsByTagName("input")[0];
+const txt = document.getElementById("txt");
 
-function sizing(event) {
+let size = 16;
 
-    const getEventId = event.target.id;
-
-
-
-    if (parseInt(zoneSize.value) == undefined) {
-
-        console.log("La taille du texte n'est pas un nombre");
-    }
-
-    let txtSize = parseInt(zoneSize.value);
-
-
-    if (txtSize >= 8 && txtSize <= 48 && getEventId === "txtSize") {
-        // on ne fait rien;
-    }
-    else if (txtSize >= 8 && txtSize <= 48 && getEventId === "btnIncrease") {
-
-        txtSize++;
-
-    }
-    else if (txtSize >= 8 && txtSize <= 48 && getEventId === "btnDecrease") {
-
-        txtSize--;
-
-    }
-    else {
-
-        txtSize = 16;
-
-    }
-    txt.style.fontSize = txtSize + "px";
-    txtSize.value = txtSize;
-
+function updateFontSize(){
+    input.value = size;
+    txt.style.fontSize = size + "px";
 }
-btnIncrease.addEventListener("click", sizing);
-btnDecrease.addEventListener("click", sizing);
-zoneSize.addEventListener("change", sizing);
+
+plus.addEventListener("click", function () {
+    size++;
+    if (size > 48) size = 16;
+    updateFontSize();
+});
+
+minus.addEventListener("click", function () {
+    size--;
+    if (size < 8) size = 16;
+    updateFontSize();
+});
+
+input.addEventListener("change", function () {
+    size = input.value;
+    if (size > 48 || size < 8) size = 16;
+    updateFontSize();
+});

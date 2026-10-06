@@ -1,0 +1,24 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+form {
+    border: 2px solid blue;
+    padding: 12px;
+}
+
+#btn {
+    border: 0.5px solid blue;
+    color: blue;
+}
+
+input {
+    border: 0.5px solid blue;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: grey;
+}
