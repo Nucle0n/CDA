@@ -1,17 +1,7 @@
 const zoneSize=document.querySelector("#txtSize");
-
 const btnIncrease = document.getElementById("btnIncrease");
 const btnDecrease = document.getElementById("btnDecrease");
-
 const txt = document.querySelector("p");
-// const txt = document.getElementById("txt");
-// const txt = document.getElementsByTagName("p");
-
-// btnIncrease.addEventListener("click", function(){
-//     let fontSize = getComputedStyle(txt).fontSize;
-//     console.log(fontSize);
-// })
-
 
 function sizing(event){
     
@@ -44,11 +34,3 @@ function sizing(event){
     btnIncrease.addEventListener("click", sizing);
     btnDecrease.addEventListener("click", sizing);
     zoneSize.addEventListener("change", sizing);
-
-// let fontSize = 16;
-
-// const returnSize = document.getElementById("returnSize");
-
-// function returnFontSize() {
-//     return "Taille actuelle : " + fontSize +"px";
-// }
