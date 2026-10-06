@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage date et heure</title>
+    <link rel="stylesheet" href="./assets/css/stye.css">
+    <script src="./assets/js/script.js" async></script> <!-- async ou defer (on charge le html d'abord)-->
+</head>
+<body>
+    <main>
+        <fieldset id="dayDate">
+            <legend>Date et heure du jour</legend>
+            <div class="wrap">
+                <label for="txtDate" class="fixe">Date du jour</label>
+                <input type="date" name="txtDate" id="txtDate">
+                <button id="btnDate">Afficher la date</button>
+                <!-- <input type="button" value="Afficher date" id="btnDate"> (Autre façon de faire) -->
+            </div>
+            <div class="wrap">
+                <label for="txtHour" class="fixe">Heure locale</label>
+                <input type="time" name="txtHour" id="txtHour">
+                <button id="btnHour">Afficher l'heure</button>
+            </div>
+        </fieldset>
+    </main>
+</body>
+</html>
