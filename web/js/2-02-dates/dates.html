@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Date de naissance</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js" defer></script>
 </head>
 <body>
     <form action="">
         <h1>Ma date de naissance</h1>
-        <label for="birthdate">Date de naissance :</label>
-        <input type="datetime-local" name="birthdate">
-        <button id="btn">calculer</button>
+        <label for="birthday">Date de naissance :</label>
+        <input id="birthday"  type="datetime-local" name="birthday">
+        <button type="button" id="calculate">calculer</button>
         <hr>
-        <p>Sélectionnez une date dans le passé.</p>
+        <section>
+        <p class="result">Sélectionnez une date dans le passé.</p>
         <hr>
+        <p class="result"></p>
+        </section>
     </form>
 </body>
 </html>
