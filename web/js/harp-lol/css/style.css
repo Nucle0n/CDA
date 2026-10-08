@@ -1,0 +1,28 @@
+body {
+    background-image:  url(../img/lyre.jpg), linear-gradient(to bottom, #EEE5CA, #FAF4E1, #F2ECD7);
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    height: 1000px;
+}
+
+.piano {
+    position: absolute;
+    top: 250px;
+    left: 410px;
+    display: flex;
+    gap: 26px;
+}
+
+.whi{
+    width: 5px;
+    height: 285px;
+    padding-top: 200px;
+    line-height: 1.5rem;
+    color: rgb(160, 160, 160);
+    background-color: rgb(87, 59, 0);
+}
+
+.whi:hover {
+        background-color: red;
+    }
+

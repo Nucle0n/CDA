@@ -17,16 +17,16 @@ function beep(duration = 200, frequency = 440, volume = 0.5) {
     }, duration);
 }
 
-let vol = 0.5;
+let vol = 1;
 
 const infoVol = document.getElementById("infoVol");
-const clavier = document.querySelectorAll("button");
+const clavier = document.querySelectorAll("div");
 const frequencies = [261.625, 277.182, 293.664, 311.126, 329.627, 349.228, 369.994, 391.995, 415.304, 440, 466.163, 493.883];
 
 for (let i = 0; i < clavier.length; i++) {
     // clavier[i].removeEventListener("click");
-    clavier[i].addEventListener("click", function () {
-        beep(300, frequencies[i], vol);
+    clavier[i].addEventListener("mouseover", function () {
+        beep(400, frequencies[i], vol);
         console.log("test")
     });
 }
