@@ -47,81 +47,78 @@ function calculateAge() {
     switch (birthDate.getMonth() + 1) {
         case 1:
             if (birthDate.getDate() < 20) {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/capricorne.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/capricorne.jpg" alt="Signe astrologique">`;
             } else {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/verseau.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/verseau.jpg" alt="Signe astrologique">`;
             }
             break;
         case 2:
             if (birthDate.getDate() < 19) {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/verseau.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/verseau.jpg" alt="Signe astrologique">`;
             } else {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/poissons.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/poissons.jpg" alt="Signe astrologique">`;
             }
             break;
         case 3:
             if (birthDate.getDate() < 21) {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/poissons.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/poissons.jpg" alt="Signe astrologique">`;
             } else {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/belier.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/belier.jpg" alt="Signe astrologique">`;
             } break;
         case 4:
             if (birthDate.getDate() < 20) {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/belier.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/belier.jpg" alt="Signe astrologique">`;
             } else {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/taureau.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/taureau.jpg" alt="Signe astrologique">`;
             } break;
         case 5:
             if (birthDate.getDate() < 21) {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/taureau.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/taureau.jpg" alt="Signe astrologique">`;
             } else {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/gemeaux.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/gemeaux.jpg" alt="Signe astrologique">`;
             } break;
         case 6:
             if (birthDate.getDate() < 21) {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/gemeaux.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/gemeaux.jpg" alt="Signe astrologique">`;
             } else {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/cancer.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/cancer.jpg" alt="Signe astrologique">`;
             } break;
         case 7:
             if (birthDate.getDate() < 23) {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/cancer.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/cancer.jpg" alt="Signe astrologique">`;
             } else {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/lion.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/lion.jpg" alt="Signe astrologique">`;
             } break;
         case 8:
             if (birthDate.getDate() < 23) {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/lion.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/lion.jpg" alt="Signe astrologique">`;
             } else {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/vierge.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/vierge.jpg" alt="Signe astrologique">`;
             } break;
         case 9:
             if (birthDate.getDate() < 23) {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/vierge.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/vierge.jpg" alt="Signe astrologique">`;
             } else {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/balance.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/balance.jpg" alt="Signe astrologique">`;
             } break;
         case 10:
             if (birthDate.getDate() < 23) {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/balance.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/balance.jpg" alt="Signe astrologique">`;
             } else {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/scorpion.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/scorpion.jpg" alt="Signe astrologique">`;
             } break;
         case 11:
             if (birthDate.getDate() < 22) {
-                validationSummarize.innerHTML.
-                validationSummarize.innerHTML = `<br><img src="./assets/img/scorpion.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/scorpion.jpg" alt="Signe astrologique">`;
             } else {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/sagittaire.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/sagittaire.jpg" alt="Signe astrologique">`;
             } break;
         case 12:
             if (birthDate.getDate() < 22) {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/sagittaire.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/sagittaire.jpg" alt="Signe astrologique">`;
             } else {
-                validationSummarize.innerHTML = `<br><img src="./assets/img/capricone.jpg" alt="Signe astrologique">`;
+                validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/capricone.jpg" alt="Signe astrologique">`;
             } break;
-
-
     }
 
 }
