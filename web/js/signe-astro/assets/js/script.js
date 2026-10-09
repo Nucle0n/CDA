@@ -119,6 +119,9 @@ function calculateAge() {
             } else {
                 validationSummarize.innerHTML = `<br> le : ${txtBirthday.value}<br><img src="./assets/img/capricone.jpg" alt="Signe astrologique">`;
             } break;
+        default:
+            console.error("Erreur dans la valeur du mois");
+            break;
     }
 
 }

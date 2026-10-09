@@ -1,0 +1,18 @@
+body, main {
+    background-color: #536B78;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    width: 80vw;
+    border: 2px solid #829DAE;
+}
+
+h1 {
+    margin: 10px;
+    color: #ACCBE1;
+}
+
+ul {
+    color: #CEE5F2;
+}
