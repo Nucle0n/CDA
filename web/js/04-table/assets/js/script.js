@@ -1,4 +1,3 @@
-
 const pplList=document.createElement("ul");
 pplList.id="ppl-list"; 
 
@@ -13,3 +12,5 @@ function addPeople() {
 }
 
 addPeople();
+
+document.querySelector("main").appendChild(pplList);
