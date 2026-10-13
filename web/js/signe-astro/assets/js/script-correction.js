@@ -1,22 +1,138 @@
 const txtBirthday = document.getElementById("birthday");
 const btnCalculate = document.querySelector("#calculate");
-// const tabResult= document.querySelectorAll("p");
+const mySection = document.querySelector("section"); // on va chercher la section dans la page
 
-// tabResult.forEach((el)=>{el.textContent="traitement formulaire"});
+
 const validation = document.querySelector(".result");
-const vignette = document.querySelector(".vignette");
-// validation.textContent += " traitement";
+validation.textContent += " traitement";
 
+//listeZodiaque.className="zodiaque";
+
+const mySection2 = document.querySelector("#signe");
+const zodiaque =
+    "Bélier,Taureau,Gémeaux,Cancer,Lion,Vierge,Balance,Scorpion,Sagittaire,Capricorne,Verseau,Poissons";
+let tabzodiaque = zodiaque.split(",");
+const listeZodiaque = document.createElement("ul");
+listeZodiaque.id = "signes";
+listeZodiaque.classList.add("zodiaque");
+mySection2.appendChild(listeZodiaque);
+// for (let i = 0; i < tabzodiaque.length; i++) {
+
+//   const myli=document.createElement("li");
+//   myli.textContent=tabzodiaque[i];
+//   listeZodiaque.appendChild(myli);
+
+// }
+
+//const enfant = document.getElementsByTagName("li");
 function calculateAge() {
     let chaineBirthday = txtBirthday.value;
+    console.log(chaineBirthday);
     let delay = Date.parse(chaineBirthday); // durée en milliseconde depuis 1er janvier 1970 à minuit
     const birthDate = new Date(delay); //creation de l'objet date
+    let birthDay = birthDate.getDate();
+    let birthMonth = birthDate.getMonth() + 1;
+    console.log("mois : " + birthMonth + " jour" + birthDay);
+
+    function createLi(_signeAstro) {
+        let myliSigne = document.createElement("li");
+        myliSigne.className = "zodiaque";
+        myliSigne.textContent = _signeAstro;
+        listeZodiaque.appendChild(myliSigne);
+    }
+
+    function createImg(_urlimg, _nameImg, _hook) {
+        const myImg = document.createElement("img");
+        // myImg.src=_urlimg;
+        myImg.setAttribute("src", _urlimg);
+        myImg.id = _nameImg;
+        myImg.setAttribute("alt", _nameImg);
+        myImg.setAttribute("style", "width:200px;height:auto");
+        _hook.appendChild(myImg);
+    }
+
+    switch (birthMonth) {
+        case 1:
+            listeZodiaque.childNodes.forEach((el) => {
+                el.remove();
+            });
+            //listeZodiaque.remove();
+            if (birthDay > 19) {
+                //verseau
+
+                console.log("verseau");
+
+
+                //  myliSigne.textContent=tabzodiaque[10];
+                createLi(tabzodiaque[10]);
+                createImg("./assets/img/verseau.jpg", "Verseau", mySection);
+
+
+
+                //
+            } else {
+                //capricone
+                listeZodiaque.childNodes.forEach((el) => {
+                    el.remove();
+                });
+                console.log("capricorne");
+                createLi(tabzodiaque[9]);
+                createImg("./assets/img/capricorne.jpg", "capricorne", mySection);
+                // myliSigne.textContent=tabzodiaque[9];
+            }
+            break;
+
+        case 2:
+            //poisson
+
+            //   listeZodiaque.remove();
+            if (birthDay > 18) {
+                console.log("poisson");
+
+                createLi(tabzodiaque[11]);
+                //  myliSigne.textContent=tabzodiaque[11];
+            } else {
+                //verseau
+                console.log("verseau");
+
+                createLi(tabzodiaque[10]);
+
+                //     myliSigne.textContent=tabzodiaque[10];
+            }
+
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+        case 6:
+            break;
+        case 7:
+            break;
+        case 8:
+            break;
+        case 9:
+            break;
+        case 10:
+            break;
+        case 11:
+            break;
+        case 12:
+            break;
+
+        default:
+            console.error("error sur la valeur du mois");
+            break;
+    }
+
     const today = new Date(); // creation de l'objet date du jour
     const validationSummarize = document.createElement("p"); //creation d'un paragraphe HTML
-    const genSign = document.createElement("p");
     validationSummarize.id = "test"; //ajout d'un id pour utile pour JS
     validationSummarize.className = "summarize"; // ajout d'une classe pour mise en forme
-    const mySection = document.querySelector("section"); // on va chercher la section dans la page
+
+
     mySection.appendChild(validationSummarize);
 
     if (birthDate > today) {
@@ -40,24 +156,11 @@ function calculateAge() {
         let nbYearV2 = Math.floor(dateDiff / 1000 / 60 / 60 / 24 / 365.25);
         validationSummarize.innerHTML += ` <br> Il s'est écoulé <span class="bleu"> ${nbyear}</span> années depuis votre naissance.`;
     }
-    console.log(txtBirthday.value);
-    console.log(birthDate.getMonth() + 1);
-    console.log(birthDate.getDate());
-
-    const zodiaque="Bélier,Taureau,Gémeaux,Cancer,Lion,Vierge,Balance,Scorpion,Sagittaire,Capricorne,Verseau,Poissons";
-    let tabZodiaque=zodiaque.split(',');
-    const listeZodiaque= document.createElement("ul");
-    listeZodiaque.id="signes"
-    // listeZodiaque.className="zodiaque";
-    listeZodiaque.classList.add('zodiaque');
-
-    mySection=
-
+}
 
 btnCalculate.addEventListener("click", function () {
+    mySection.childNodes.forEach((el) => {
+        el.remove();
+    });
     calculateAge();
 });
-
-
-
-

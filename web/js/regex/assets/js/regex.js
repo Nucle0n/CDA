@@ -1,7 +1,9 @@
 const mybtnSubmit= document.getElementById("valider");
 const txtName=document.querySelector("#myName");
 const chaine1 = document.querySelector("#myPassword1");
- const chaine2= document.querySelector("#myPassword2");
+const chaine2= document.querySelector("#myPassword2");
+const today = new Date();
+
 
 mybtnSubmit.addEventListener("click",
     function(event){
@@ -9,14 +11,21 @@ mybtnSubmit.addEventListener("click",
 
         const myForm=document.querySelector("form");
 
-        if (validateName(txtName.value)==true && validatePassword(chaine1.value,chaine2.value)==true ) {
-       
-            myForm.submit();   
+        if (validateName(txtName.value)==true && validatePassword(chaine1.value,chaine2.value)==true ) {      
+            // myForm.submit();   
+        
         }else{
-
             alert("saisie du nom incorrect! ou mot de passe différents");
         }
 
+        const inBirthday = document.getElementById("myBirthDate").value;
+
+        console.log(today);
+        console.log(inBirthday);
+
+        if (){
+            
+        }
     }
 )
 /**
@@ -47,4 +56,4 @@ function regexPassword(password) {
 }
 
 
-const birthday = document.getElementById("birthday")
+
