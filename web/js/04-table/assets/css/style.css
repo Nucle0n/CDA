@@ -1,18 +1,47 @@
+:root {
+    --mainBG:#536B78;
+    --tableBG:#637181;
+    --Borders-col: #829DAE;
+    --primaryTxtCol: #ACCBE1; 
+    --colorList: #CEE5F2;
+}
+
 body, main {
-    background-color: #536B78;
+    background-color: var(--mainBG);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 main {
     width: 80vw;
-    border: 2px solid #829DAE;
+    border: 2px solid var(--Borders-col);
 }
 
-h1 {
+h1, #ppl-table {
     margin: 10px;
-    color: #ACCBE1;
+    color: var(--primaryTxtCol);
 }
 
 ul {
-    color: #CEE5F2;
+    color: var(--colorList);
+}
+
+#ppl-table {
+    border-collapse: collapse;
+
+    td, th {
+        border: 2px solid var(--Borders-col);
+        background-color: var(--tableBG);
+        padding: 6px 5px 4px;
+    }
+}
+
+.delBtn {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    color: var(--colorList);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
 }
