@@ -1,9 +1,15 @@
+const title = document.getElementById("title");
+
 const pplList = document.createElement("ul");
 pplList.id = "ppl-list";
 
+const sectionAdd = document.createElement("section")
+sectionAdd.id = "addNewPpl";
+
 const pplTable = document.getElementById("ppl-table");
 
-let cpt = 0;
+let cpt     = 0;
+let liCpt   = 0;
 
 function addPeople() {
 
@@ -12,6 +18,7 @@ function addPeople() {
     for (let i = 0; i < people.length; i++) {
 
         const myli = document.createElement("li");
+        myli.id = liCpt++;
         myli.textContent = people[i];
         pplList.appendChild(myli);
 
@@ -77,7 +84,7 @@ function delBtn (cell, rowid, liid) {
     delBtn.textContent = "X"
     delBtn.addEventListener("click", function() {
         document.getElementById(rowid).remove();
-        document.getElementById(liid).remove(); 
+        // document.getElementById(liid).remove(); 
     })
 
     cell.appendChild(delBtn);
@@ -86,3 +93,4 @@ function delBtn (cell, rowid, liid) {
 addPeople();
 
 document.getElementById("title").after(pplList);
+document.getElementById("title").after(sectionAdd);
