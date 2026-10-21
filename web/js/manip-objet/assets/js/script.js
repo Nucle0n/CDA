@@ -1,5 +1,3 @@
-
-// Notre objet contenant les informations de John Doe
 const myEmployee = {
     nom: "Doe",
     prenom: "John",
@@ -10,9 +8,33 @@ const myEmployee = {
 const myTable = document.getElementById("tabObj");
 const myThead = myTable.createTHead();
 const myTitleRow = myThead.insertRow();
-const email = genMail(myEmployee['prenom'], myEmployee['nom']);
 
+const email = genMail(myEmployee['prenom'], myEmployee['nom']);
 // myEmployee.email = email;
+
+const editProfil = document.getElementById("editProfil");
+const myForm = document.createElement("form");
+editProfil.after(myForm);
+
+const tabFor = ["Prenom", "Nom", "Birthday", "Salaire"];
+
+for (const e of tabFor) {
+    
+    const myLabel = document.createElement("label");
+    myLabel.htmlFor = e.toLowerCase();
+    myLabel.textContent = (e == "Birthday") ? "Date de naissance" : e;
+    // Si "e" est "Birthday", Alors On remplace "Birthday" par "Date de naissance", sinon on conserve "e" tel quel;
+    myForm.appendChild(myLabel);
+    
+    const myInput = document.createElement("input");
+    myLabel.appendChild(myInput);
+    myInput.type = (e == "Birthday") ? 'date' : "text";
+    myInput.id = e.toLowerCase();
+}
+
+const myBtn = document.createElement("button")
+myBtn.textContent = "Enregistrer";
+myForm.appendChild(myBtn);
 
 for (const key in myEmployee) {
 

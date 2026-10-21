@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -49,14 +52,15 @@ form {
     margin: 15px;
 }
 
-form div {
+form label {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin: 15px 0;
 }
 
 label {
-    width: 150px;
+    width: 300px;
 }
 
 input {
@@ -70,7 +74,7 @@ button {
     background-color: lightgreen;
     border: none;
     padding: 6px;
-    margin-left: 150px;
+    margin-left: 170px;
     cursor: pointer;
 }
 
