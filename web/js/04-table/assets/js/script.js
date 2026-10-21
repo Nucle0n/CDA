@@ -3,9 +3,6 @@ const title = document.getElementById("title");
 const pplList = document.createElement("ul");
 pplList.id = "ppl-list";
 
-const sectionAdd = document.createElement("section")
-sectionAdd.id = "addNewPpl";
-
 const pplTable = document.getElementById("ppl-table");
 
 let cpt     = 0;
@@ -93,4 +90,22 @@ function delBtn (cell, rowid, liid) {
 addPeople();
 
 document.getElementById("title").after(pplList);
-document.getElementById("title").after(sectionAdd);
+
+function formAddPPL() {
+
+    const addForm = document.createElement("form");
+    addForm.id = "addForm";
+
+    const fNameLabel = document.createElement("label");
+    fNameLabel.id = "firstname_Label"
+    fNameLabel.setAttribute("for","prenom")
+
+    const firstname = document.createElement("input") 
+
+    const lNameLabel = document.createElement("label");
+    lNameLabel.id = "lastname_Label"
+    lNameLabel.setAttribute("for", "nom");
+
+    document.getElementById("title").after(addForm);
+
+}
