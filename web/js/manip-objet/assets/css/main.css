@@ -7,8 +7,8 @@ body {
 main {
     border: 2px solid green;
     padding: 10px;
-    /* max-width: 600px;
-    min-height: 380px; */
+    max-width: 80%;
+    /* min-height: 380px; */
 }
 
 h1 {
@@ -18,11 +18,22 @@ h1 {
     margin-bottom: 25px;
 }
 
+h2 {
+    margin: 0;
+    padding-left: 8px;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
 table {
     border-collapse: separate;
     border-spacing: 2px;
     margin-bottom: 25px;
 }
+
+/* form {
+    display: flex;
+} */
 
 th, td {
     background-color: lightgreen;

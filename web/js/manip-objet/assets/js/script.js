@@ -10,6 +10,9 @@ const myEmployee = {
 const myTable = document.getElementById("tabObj");
 const myThead = myTable.createTHead();
 const myTitleRow = myThead.insertRow();
+const email = genMail(myEmployee['prenom'], myEmployee['nom']);
+
+// myEmployee.email = email;
 
 for (const key in myEmployee) {
 
@@ -21,7 +24,6 @@ for (const key in myEmployee) {
 
 const myTbody = myTable.createTBody();
 const myRow = myTbody.insertRow();
-
 
 for (const key in myEmployee) {
     const myCell = myRow.insertCell();
@@ -37,4 +39,16 @@ for (const key in myEmployee) {
         myCell.textContent = myEmployee[key];
     }
 }
+
+const emailThead = document.createElement("th");
+emailThead.textContent = "Email";
+myTitleRow.insertBefore(emailThead, myTitleRow.children[3]);
+
+const emailCell = myRow.insertCell(3);
+emailCell.textContent = email;
+
+function genMail(prenom, nom) {
+    return (prenom+"."+nom+"@example.com").toLowerCase();
+}
+
 
