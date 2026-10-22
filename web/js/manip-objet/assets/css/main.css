@@ -2,9 +2,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --txt-color: #066400;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--txt-color);
 }
 
 main {
@@ -22,6 +26,7 @@ h1 {
 }
 
 h2 {
+    color: black;
     margin: 0;
     padding-left: 8px;
     font-weight: normal;
@@ -53,6 +58,7 @@ form {
 }
 
 form label {
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,28 +66,26 @@ form label {
 }
 
 label {
-    width: 300px;
+    width: 350px;
 }
 
 input {
+    color: var(--txt-color);
     background-color: lightgreen;
     border: none;
     padding: 5px;
-    width: 130px;
+    width: 150px;
 }
 
-button {
+#btnValidate {
+    color: var(--txt-color);
     background-color: lightgreen;
     border: none;
     padding: 6px;
-    margin-left: 170px;
+    margin-left: 200px;
     cursor: pointer;
 }
 
-button:hover {
+#btnValidate:hover {
     background-color: #60d870;
-}
-
-#erreur {
-    color: red;
 }
