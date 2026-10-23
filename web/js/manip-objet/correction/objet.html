@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulation d'Objet</title>
+    <script src="/assets/js/scriptobj.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Profil de John Doe</h1>
+    </header>
+    <main>
+      <table id="tabobj">
+        <!-- <thead><tr><th></th></tr>
+</thead>-->
+      </table>
+
+      <form action="" method="get">
+        <div class="row">
+          <label for="txtNom">Nom</label>
+          <input type="text" id="txtNom" name="txtNom" />
+        </div>
+        <div class="row">
+          <label for="txtPrenom">Prénom</label>
+          <input type="text" id="txtPrenom" name="txtPrenom" />   
+        </div>
+         <div class="row">
+          <label for="txtBirthday">Date naissance</label>
+          <input type="date" id="txtBirthday" name="txtBirthday" />   
+        </div>
+      <div class="row">
+         <label for="txtSalary">Salaire </label>
+          <input type="number" id="txtSalary" step="0.01" min="1 477.93" max="50000" name="txtSalary" />   
+      </div>
+      <input type="submit" value="Enregistrer" id="btnValidation" name="btnValidation" />
+
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
