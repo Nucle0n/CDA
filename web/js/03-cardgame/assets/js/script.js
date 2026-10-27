@@ -1,45 +1,63 @@
-async function getData() {
-  const url = "https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json";
-  try {
-    const data = await fetch(url);
-    if (!data.ok) {
-      throw new Error(`Statut de réponse : ${data.status}`);
+// --------- MAIN --------- //
+fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
+    .then(response => { return response.json(); })
+    .then(data => {
+
+        // console.log(data);
+
+        displayTable(data);
+    })
+    .catch((error) => alert("erreur:" + error));
+
+
+// --------- FONCTIONS ---------- //
+
+    // --------- Table ---------//
+    function displayTable(_data) {
+
+        const main = document.querySelector("main");
+        const table = document.createElement("table");
+        main.appendChild(table);
+
+        const thead = table.createTHead();
+        const tbody = table.createTBody();
+        tbody.id = "tContent"
+
+        let newRow = addRow(thead);
+        
+
+        for (const key in _data[0]) {
+            const headCell = document.createElement("th");
+            headCell.textContent = key;
+            newRow.appendChild(headCell);
+            headCell.id = key;
+        }
+
+        // console.log(_data)
+
+        // let cpt = 1;
+
+        for (const element of _data) {
+            newRow = addRow(tbody);
+            // newRow.id = cpt++;
+            // if (newRow.id %2){
+            //     newRow.className="bg-light"
+            // } else {
+            //     newRow.className="bg-dark"
+            // }
+
+            for (const key in _data[0]) {
+                const addCell = document.createElement("td");
+                addCell.textContent = element[key];
+                newRow.appendChild(addCell);
+            }
+        }
     }
 
-    return await data.json();
-    // console.log(resultat);
-  } catch (erreur) {
-    console.error(erreur.message);
-  }
-}
-
-async function test() {
-    const data = await getData();
-    console.log(data);
-    const main = document.querySelector("main");
-    const table = document.createElement("table");
-    const thead = table.createTHead();
-    const newROw = table.insertRow();
-    main.appendChild(table);
-    table.id = "cards"
-    
-    for (const key in data) {
-        const headCell = document.createElement("th");
-        console.log(data[key]);
-            
+    // ----- Ajouter ligne ----- //
+    function addRow(_tPart){
+        return _tPart.insertRow();
     }
-} 
-test()
-
-// const tbody = document.getElementById("tb");
-
-// let data;
-
-// async function getData() {
-//     data = await fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json");
-// }
-
-// getData();
 
 
 

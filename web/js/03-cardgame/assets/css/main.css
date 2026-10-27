@@ -1,3 +1,8 @@
+:root {
+    --bg-dark: #DDDDDD;
+    --bd-light: #B7B6CE;
+}
+
 table {
     border: 2px solid black;
     border-collapse: collapse;
@@ -7,12 +12,28 @@ table {
 
         tr {
             th {
-                border-left: 1px solid #B7B6CE;
-                
+                border-left: 1px solid var(--bd-light);
+
                 font-weight: bolder;
                 padding: 4px 10px;
             }
         }
     }
 
+    tbody {
+        tr {
+            border-top: 1px solid var(--bd-light);
+
+        }
+    }
+
+}
+
+/* .bg-dark {
+    background-color: var(--bg-dark);
+} */
+
+
+tbody tr:nth-child(even) {
+    background-color: var(--bg-dark);
 }
