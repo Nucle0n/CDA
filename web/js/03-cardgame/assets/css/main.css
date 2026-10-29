@@ -1,6 +1,11 @@
 :root {
     --bg-dark: #DDDDDD;
     --bd-light: #B7B6CE;
+    --br : 12px;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 table {
@@ -36,4 +41,35 @@ table {
 
 tbody tr:nth-child(even) {
     background-color: var(--bg-dark);
+}
+
+#card {
+
+    background-color: black;
+
+    border: 2px solid var(--bd-light);
+
+    border-radius: var(--br);
+
+    width: 300px;
+
+    #card-header {
+
+        background-image: linear-gradient(90deg,rgba(0, 255, 200, 1) 0%, rgb(126, 255, 122) 100%);
+        
+        /* border: 2px solid var(--bd-light); */
+        border-top-left-radius: calc(var(--br) - 2.5px);
+        border-top-right-radius: calc(var(--br) - 2.5px);
+        
+        width: 100%;
+        height: 50px;;
+    }
+
+    #knight {
+        width: 200px;
+        height: auto;
+
+        padding: 15px;
+    }
+
 }

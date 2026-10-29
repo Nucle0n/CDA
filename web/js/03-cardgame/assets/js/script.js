@@ -53,7 +53,7 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
         }
 
         noLife(_data);
-        bestPlayer();
+        playerCard();
     }
 
     // ----- Ajouter ligne ----- //
@@ -67,22 +67,58 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
         pSection.id = "biggestPlayer";
         document.querySelector("table").after(pSection);
         
-        const hr = document.createElement("hr");
-        pSection.appendChild(hr);
-        // document.getElementById("biggestPlayer").after(hr);
-        hr.id = "sep";
+        const hr = () => {
+            const ret = document.createElement("hr");
+            ret.classList = "sep";
+            return ret;
+        };
+
+        // Equivalents : 
+
+        // const hr = function() {
+        //     const ret = document.createElement("hr");
+        //     ret.classList = "sep";
+        //     return ret;
+        // };
+
+        // function hr() {
+        //     const ret = document.createElement("hr");
+        //     ret.classList = "sep";
+        //     return ret;
+        // };
+
+        const hr1 = hr();
+        pSection.appendChild(hr1);
+        
+        const hr2 = hr();
+        document.getElementById("biggestPlayer").after(hr2);
 
         const pP = document.createElement("p");
-        document.getElementById("sep").after(pP);
+        document.querySelector("hr").after(pP);
+        document.querySelector("p").after(hr2);
 
         pP.textContent = "Joueur avec le plus de parties : " + maxAtq(_data).name + " (victoires : " + maxAtq(_data).victory+") ";
         }
     
-    // ----- Carte avec le meilleur ratio de victoires ----- //
-    async function bestPlayer() {
+    // ----- Construction carte ----- //
+    function playerCard(_data) {
         const card = document.createElement("article");
-        document.getElementById("biggestPlayer").after(article);
-        card.id = card;
+        card.id = "card";
+        document.getElementById("biggestPlayer").after(card);
+
+        const cardHeader = document.createElement("header");
+        cardHeader.id = "card-header";
+        card.appendChild(cardHeader);
+        
+        const picture = document.createElement("img");
+        picture.id = "knight";
+        picture.setAttribute("src", "./assets/img/knight.png");
+        picture.setAttribute("alt", "minimalist picture of a knight");
+        document.getElementById("card-header").after(picture);
+
+        const panel = document.createElement("aside")
+        panel.id = "panel";
+        card.appendChild(panel);
     }
 
     // ----- Calculer le ratio de victoire ----- //
