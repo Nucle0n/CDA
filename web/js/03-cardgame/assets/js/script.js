@@ -9,16 +9,15 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
     })
     .catch((error) => alert("erreur:" + error));
 
-    
-
-
-
 // --------- FONCTIONS ---------- //
 
     // --------- Table ---------//
     function displayTable(_data) {
 
-        const main = document.querySelector("main");
+        const body = document.querySelector("body")
+        const main = document.createElement("main")
+        body.appendChild(main);
+        
         const table = document.createElement("table");
         main.appendChild(table);
 
@@ -161,4 +160,3 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
         }
         return carteMaxWin;
     }
-

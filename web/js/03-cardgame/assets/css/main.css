@@ -70,6 +70,27 @@ tbody tr:nth-child(even) {
         height: auto;
 
         padding: 15px;
+
+        animation: wavy 1s linear infinite forwards;
     }
 
+}
+
+/* ----- Animations ----- */
+@keyframes wavy{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(0eg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }

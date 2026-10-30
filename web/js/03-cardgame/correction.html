@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP jeu de carte</title>
+    <script src="./assets/js/game.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+    <table id="cards"></table>
+    <section id="card">
+      <article id="cardheader">
+        <h2></h2>
+        <p>
+          <span id="played"></span>|
+          <span id="victory"></span>
+        </p>
+      </article>
+      <article id="cardbody">
+        <figure id="left">
+          <img
+            src="./assets/img/armure_jeux.png"
+            alt="image standard carte"
+            id="test"
+          />
+        </figure>
+        <div id="right">
+          <div>POWER  :</div>
+          <p id="p"></p>
+          <div>ATTACK :</div>
+          <p id="a"></p>
+          <div>DEFENSE :</div>
+          <p id="d"></p>
+        </div>
+      </article>
+      <article id="cardfoot"></article>
+    </section>
+
+    </main>
+<footer>
+<input type="button" value="Afficher carte + forte attaque" id="btnAttack">
+<input type="button" value="Afficher carte + forte defense" id="btnDefense">
+<input type="button" value="Afficher carte + fort pouvoir" id="btnPower">
+    
+
+
+<div class="animation-box"> <span>Donjon it's in a game !!!</span></div>
+</footer>
+
+
+  </body>
+</html>

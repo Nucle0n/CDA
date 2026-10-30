@@ -1,0 +1,157 @@
+thead th {
+
+    background-color: #aaa;
+    border: 1px solid #000;
+    padding: 10px;
+  
+}
+
+#cards{ 
+width: 50%;
+border: 1px solid #000;
+border-collapse: collapse;
+    
+}
+
+tbody tr:nth-child(2n){
+
+ background-color: #ccc;
+ 
+}
+tbody td {
+    padding: 8px;
+    
+ }
+ #card {
+    border: 2px solid #000;
+    width: 40%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+height: auto;
+ }
+*{ box-sizing: border-box;
+ 
+}
+main {
+display: flex;
+flex-direction: row;
+justify-content:space-around ;
+background-color: #eee;
+}
+#cardheader{
+   
+    background-color: #003300;
+    color: #E2EFD9;
+    
+    text-align: center;
+}
+#cardbody{
+    background-color: #000;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+color: #fff;
+
+}
+#right {
+     /*list-style:none;*/
+     font-family: 'Broadway';
+     text-transform: capitalize;
+     font-weight: bold;
+     color:#fff;
+     font-size: 1.4rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+    }
+
+
+#cardfoot{
+    background-color: #000;
+    height: 100px;
+}
+#test:hover {
+ transform:scale(120%);
+ transform-origin: 50% 50%;   
+cursor: pointer;
+/* transition-property: all;
+transition-duration: 500ms; */
+/* transition-timing-function: ease; */
+/* transition-timing-function:ease-in-out  ; */
+
+/* transition-delay: 500ms; */
+}
+#test {
+transition-property: all;
+transition-duration: 500ms;
+/* transition-timing-function: ease; */
+transition-timing-function:ease ;
+
+}
+#cardheader h2 {
+    margin: 0;
+    padding-top: 10px;
+    
+    font-family: 'Broadway';
+    font-variant: small-caps;
+    font-size: 3rem;
+  
+}
+/*----------------------------------- Animation ---------------------------------------------*/
+.animation-box {
+
+    /*etape 1 */
+    margin:auto;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-variant: small-caps;
+
+   width: 100px; 
+  height: 100px;
+  background-color: #3498db;
+ /* Appel de l'animation : nom, durée, vitesse type de transition, répétition et aller-retour */
+  animation: mouve 3s ease-in-out  2 alternate forwards;
+/* etape2
+pivotement 45deg
+cercle rouge
+etape 3
+pivotement 180deg
+zoom 1.5
+carré vert pomme
+*/
+/* animation: transformer 5s ease-in-out infinite alternate; */
+}
+
+/* Définition des étapes de l'animation */
+@keyframes mouve {
+0% {  
+ transform: rotate(0deg) scale(1);
+    border-radius: 0%;
+      background-color: #3498db;
+
+}
+50%{
+  transform: rotate(180deg);
+  border-radius: 50%;   
+  background-color: #ff4400;  
+}
+100%{
+    transform: rotate(180deg) scale(1.5);
+border-radius: 0;
+background-color: #25aa00;
+}
+
+
+}
+
+footer{
+
+    background-color: #aaa;
+    padding: 40px; 
+}
