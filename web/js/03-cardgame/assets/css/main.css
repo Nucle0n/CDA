@@ -1,7 +1,7 @@
 :root {
     --bg-dark: #DDDDDD;
     --bd-light: #B7B6CE;
-    --br : 12px;
+    --br: 12px;
 }
 
 * {
@@ -44,6 +44,8 @@ tbody tr:nth-child(even) {
 }
 
 #card {
+    display: flex;
+    flex-wrap: wrap;
 
     background-color: black;
 
@@ -51,46 +53,95 @@ tbody tr:nth-child(even) {
 
     border-radius: var(--br);
 
-    width: 300px;
+    width: 400px;
 
-    #card-header {
+    /* margin-top: 10px; */
 
-        background-image: linear-gradient(90deg,rgba(0, 255, 200, 1) 0%, rgb(126, 255, 122) 100%);
-        
-        /* border: 2px solid var(--bd-light); */
-        border-top-left-radius: calc(var(--br) - 2.5px);
-        border-top-right-radius: calc(var(--br) - 2.5px);
-        
-        width: 100%;
-        height: 50px;;
+        #card-header {
+            /* display: flex;
+        justify-content: center; */
+
+            background-image: linear-gradient(90deg, rgba(0, 255, 200, 1) 0%, rgb(126, 255, 122) 100%);
+
+            /* border: 2px solid var(--bd-light); */
+            border-top-left-radius: calc(var(--br) - 2.5px);
+            border-top-right-radius: calc(var(--br) - 2.5px);
+
+            /* margin: 0; */
+
+            width: 100%;
+            height: 50px;
+            ;
+
+            h2 {
+                /* align-self: center; */
+                text-align: center;
+                margin: 0;
+            }
+
+            #mainStats {
+                display: flex;
+                justify-content: space-around;
+                margin: 0;
+            }
+        }
+
+        #knight {
+            width: 200px;
+            height: auto;
+
+            padding: 15px;
+
+            animation: wavy 1s linear infinite forwards;
+        }
+
+
+        #panel {
+            border-left: 2px solid grey;
+            height: 220px;
+
+            margin: 0;
+            padding: 0;
+
+            #statList {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                list-style: none;
+                color: white;
+            }
+        }
+}
+
+#tri-section {
+    /* display: flex; */
+    /* flex-direction: column; */
+    input {
+        display: inline-block;
+        margin-right: 20px;
+        width: 75px;
     }
-
-    #knight {
-        width: 200px;
-        height: auto;
-
-        padding: 15px;
-
-        animation: wavy 1s linear infinite forwards;
-    }
-
 }
 
 /* ----- Animations ----- */
-@keyframes wavy{
-    0%{
-        transform: rotate(0deg);
+    @keyframes wavy {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(-5deg);
+        }
+
+        50% {
+            transform: rotate(0eg);
+        }
+
+        75% {
+            transform: rotate(5deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
     }
-    25%{
-        transform: rotate(-5deg);
-    }
-    50%{
-        transform: rotate(0eg);
-    }
-    75%{
-        transform: rotate(5deg);
-    }
-    100%{
-        transform: rotate(0deg);
-    }
-}

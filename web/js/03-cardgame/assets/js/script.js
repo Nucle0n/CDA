@@ -6,6 +6,10 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
         // console.log(data);
 
         displayTable(data);
+        noLife(data);
+        playerCard();
+        triSection(data);
+
     })
     .catch((error) => alert("erreur:" + error));
 
@@ -51,8 +55,9 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
             }
         }
 
-        noLife(_data);
-        playerCard();
+        // noLife(_data);
+        // playerCard();
+
     }
 
     // ----- Ajouter ligne ----- //
@@ -60,31 +65,32 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
         return _tPart.insertRow();
     }
 
+    // ----- Ajouter HR ----- //
+    const hr = () => {
+        const ret = document.createElement("hr");
+        ret.classList = "sep";
+        return ret;
+    };
+        // Equivalents : 
+
+            // const hr = function() {
+            //     const ret = document.createElement("hr");
+            //     ret.classList = "sep";
+            //     return ret;
+            // };
+
+            // function hr() {
+            //     const ret = document.createElement("hr");
+            //     ret.classList = "sep";
+            //     return ret;
+            // };
+
+
     // ----- Afficher le plus gros joueur ----- //
     function noLife(_data){
         const pSection = document.createElement("section");
         pSection.id = "biggestPlayer";
         document.querySelector("table").after(pSection);
-        
-        const hr = () => {
-            const ret = document.createElement("hr");
-            ret.classList = "sep";
-            return ret;
-        };
-
-        // Equivalents : 
-
-        // const hr = function() {
-        //     const ret = document.createElement("hr");
-        //     ret.classList = "sep";
-        //     return ret;
-        // };
-
-        // function hr() {
-        //     const ret = document.createElement("hr");
-        //     ret.classList = "sep";
-        //     return ret;
-        // };
 
         const hr1 = hr();
         pSection.appendChild(hr1);
@@ -98,7 +104,82 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
 
         pP.textContent = "Joueur avec le plus de parties : " + maxAtq(_data).name + " (victoires : " + maxAtq(_data).victory+") ";
         }
-    
+
+    // ---- Ajouter les boutons de tri ----- //
+    function triSection(_data){
+        
+        const triSection = document.createElement("section");
+        triSection.id = "tri-section";
+        document.getElementById("biggestPlayer").after(triSection);
+
+        const paBtn = document.createElement("input");
+        paBtn.id = "paBtn";
+        paBtn.value ="Power";
+        paBtn.setAttribute("type", "button");
+        triSection.appendChild(paBtn);
+
+        paBtn.addEventListener("click", function(){
+            getPower(_data);
+            // console.log(_data);
+            console.log("Bouton Power cliqué !");
+        });
+
+        const armorBtn = document.createElement("input");
+        armorBtn.id = "armorBtn";
+        armorBtn.value = "Armor";
+        armorBtn.setAttribute("type", "button");
+        triSection.appendChild(armorBtn);
+
+        armorBtn.addEventListener("click", function(){
+            getArmor(_data);
+            console.log("Bouton Armor cliqué !");
+        });
+
+        const playedGBtn = document.createElement("input");
+        playedGBtn.id = "playedGBtn";
+        playedGBtn.value = "Played";
+        playedGBtn.setAttribute("type", "button");
+        triSection.appendChild(playedGBtn);
+
+        playedGBtn.addEventListener("click", function(){
+            getPlayed(_data);
+            console.log("Bouton Played cliqué !");
+        });
+
+        const winBtn = document.createElement("input");
+        winBtn.id = "winBtn";
+        winBtn.value = "Win";
+        winBtn.setAttribute("type", "button");
+        triSection.appendChild(winBtn);
+
+        winBtn.addEventListener("click", function(){
+            getWin(_data);
+            console.log("Bouton Win cliqué !");
+        });
+        
+
+        const hr3 = hr();
+        triSection.appendChild(hr3);
+    }
+
+    // ----- Fonctionnement des boutons ----- //
+        // ----- Bouton Power ----- //
+            function getPower(_data) {
+                console.log(_data[0].power);
+            }
+        // ----- Bouton Armor ----- //
+            function getArmor(_data) {
+                console.log(_data[0].armor);
+            }
+        // ----- Bouton Played ----- //
+            function getPlayed(_data) {
+                console.log(_data[0].played);
+            }
+        // ----- Bouton Win ----- //
+            function getWin(_data) {
+            console.log(_data[0].victory);
+        }
+
     // ----- Construction carte ----- //
     function playerCard(_data) {
         const card = document.createElement("article");
@@ -108,6 +189,26 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
         const cardHeader = document.createElement("header");
         cardHeader.id = "card-header";
         card.appendChild(cardHeader);
+
+        const pName = document.createElement("h2");
+        pName.id = "pName";
+        pName.textContent = 0 + " NAME";
+        cardHeader.appendChild(pName);
+
+        const mStatsLine = document.createElement("p");
+        mStatsLine.id = "mainStats";
+        cardHeader.appendChild(mStatsLine);
+
+        const played = document.createElement("span")
+        played.id = "played";
+        played.textContent = "Played : " + 0;
+        mStatsLine.appendChild(played);
+
+        const nbWin = document.createElement("span")
+        nbWin.id = "nbWin";
+        nbWin.textContent = "Victoires : " + 0;
+        mStatsLine.appendChild(nbWin);
+               
         
         const picture = document.createElement("img");
         picture.id = "knight";
@@ -118,6 +219,25 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
         const panel = document.createElement("aside")
         panel.id = "panel";
         card.appendChild(panel);
+
+        const statList = document.createElement("ul");
+        statList.id = "statList";
+        panel.appendChild(statList);
+
+        const power = document.createElement("li");
+        power.id = "power";
+        power.textContent = "Puissance : " + 0;
+        statList.appendChild(power);
+
+        const attack = document.createElement("li");
+        attack.id = "attack";
+        attack.textContent = "Attaque : " + 0;
+        statList.appendChild(attack);
+
+        const def = document.createElement("li");
+        def.id = "def";
+        def.textContent = "Défence : " + 0;
+        statList.appendChild(def);        
     }
 
     // ----- Calculer le ratio de victoire ----- //
