@@ -103,7 +103,8 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
         document.querySelector("hr").after(pP);
         document.querySelector("p").after(hr2);
 
-        pP.textContent = "Joueur avec le plus de parties : " + maxAtq(_data).name + " (victoires : " + maxAtq(_data).victory+") ";
+        // pP.textContent = "Joueur avec le plus de parties : " + maxAtq(_data).name + " (victoires : " + maxAtq(_data).victory+") "; 
+        pP.textContent = "Joueur avec le plus de parties : " + maxStat(_data, "attack").name + " (victoires : " + maxStat(_data, "attack").victory+")";
         }
 
     // ---- Ajouter les boutons de tri ----- //
@@ -256,6 +257,7 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
             //     }
             //     return carteMaxWin;
             // }
+
         // ----- Construction carte ----- //
     function playerCard(_data) {
         const card = document.createElement("article");
