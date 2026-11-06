@@ -9,6 +9,7 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
         noLife(data);
         playerCard();
         triSection(data);
+        maxStat(data, "victory");
 
     })
     .catch((error) => alert("erreur:" + error));
@@ -180,7 +181,82 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
             console.log(_data[0].victory);
         }
 
-    // ----- Construction carte ----- //
+    // ----- Fonctions de recherche des maximums ----- //
+
+        /**
+         * 
+         * @param {"Tableau Clées/Valeurs"} _data 
+         * @param {"String correspondant au nom de la clé"} stat 
+         */
+        function maxStat(_data, stat){
+            let maxStatValue = _data[0][stat];
+            let plCard = _data[0];
+
+            for (let i = 1; i < _data.length; i++){
+                if (_data[i][stat] > maxStatValue){
+                    maxStatValue = _data[i][stat];
+                    plCard = _data[i]
+                }               
+            }
+            return plCard;
+        }
+
+        // obsolètes ! Remplacées par : function maxStat(_data, stat);
+        
+            // // ----- Recherche Power Max ----- //
+            // function powerMax(_data){
+            //     let valueMaxPower = _data[0].power;
+            //     let pCard = _data[0];
+
+            //     for (let i = 1; i < _data.length; i++) {
+            //         if (_data[i].power > valueMaxPower) {
+            //             valueMaxPower = _data[i].power
+            //             pCard = _data[i];
+            //         }
+            //     }
+            // }
+
+            // // ----- Recherche Armor Max ----- //
+            // function armorMax(_data){
+            //     let valueMaxArmor = _data[0].armor;
+            //     let pCard = _data[0];
+
+            //     for (let i = 1; i < _data.length; i++) {
+            //         if (_data[i].armor > valueMaxArmor) {
+            //             valueMaxArmor = _data[i].armor
+            //             pCard = _data[i];
+            //         }
+            //     }
+            // }
+
+            // // ----- Recherche attaque Max ----- //
+            // function maxAtq(_data) {
+            //     let carteMaxAtq = _data[0];
+            //     let valueMaxAtq = _data[0].attack;
+
+            //     for (let i=1; i < _data.length; i++){
+            //         if (_data[i].attack > valueMaxAtq) {
+            //             valueMaxAtq = _data[i].attack;
+            //             carteMaxAtq = _data[i];
+            //         }
+            //     }
+            //     return carteMaxAtq;
+            // }
+
+            // // ----- Recherche Max Win ----- //
+            // function maxWin(_data){
+            //     let carteMaxWin = _data[0];
+            //     let valueMaxWin = _data[0].victory;
+
+            //     for (let i=1; i < _data.length; i++){
+            //         if (_data[i].victory > valueMaxWin) {
+            //             valueMaxWin = _data[i].victory;
+            //             carteMaxWin = _data[i];
+            //         }
+            //     }
+            //     return carteMaxWin;
+            // }
+        // ----- Construction carte ----- //
     function playerCard(_data) {
         const card = document.createElement("article");
         card.id = "card";
@@ -245,38 +321,9 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
         return parseFloat(victory/(victory + defeat) * 100).toFixed(2);
     }
 
-    // ----- Recherche attaque Max ----- //
-
-    function maxAtq(_data) {
-        let carteMaxAtq = _data[0];
-        let valueMaxAtq = _data[0].attack;
-
-        for (let i=1; i < _data.length; i++){
-            if (_data[i].attack > valueMaxAtq) {
-                valueMaxAtq = _data[i].attack;
-                carteMaxAtq = _data[i];
-            }
-        }
-        return carteMaxAtq;
-    }
-
     // ----- Tri par attaque Max ----- //
     function searchMaxAtqTri(_data){
         const tabDecroissant = _data.sort((a, b) => b.attack-a.attack);
         return tabDecroissant[0];
     }
 
-    // ----- Recherche attaque Max ----- //
-
-    function maxWin(_data) {
-        let carteMaxWin = _data[0];
-        let valueMaxWin = _data[0].victory;
-
-        for (let i=1; i < _data.length; i++){
-            if (_data[i].victory > valueMaxWin) {
-                valueMaxWin = _data[i].victory;
-                carteMaxWin = _data[i];
-            }
-        }
-        return carteMaxWin;
-    }
