@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* background-color: rgb(185, 226, 185); */
+    header {
+        #h-bar {
+            border-style: none;
+            height: 1px;
+            width: 20px;
+            background-color: black;
+        }
+
+        #title {
+            text-align: center;
+            font-size: medium;
+        }
+    }
+
+    main {
+        /* background-color: aqua; */
+        margin: 0 50px;
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            label {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                height: 44px;
+                /* background-color: red; */
+
+                margin: 4px 0;
+            }
+
+            .champ {
+                font-weight: bold;
+                border-style: none;
+                border-radius: 6px;
+                height: 38px;
+                width: 100%;
+                background-color: #ECECEC;
+                padding-left: 10px;
+
+                margin: 0;
+            }
+
+            #label_mail, .origine, .service {
+                width: 100%;
+                padding: 0 4px;
+            }
+
+            #txt-area {
+                height: auto;
+                margin: 6px 4px;
+                padding: 10px;
+            }
+
+            #label_prenom, #label_nom, #label_tel, #label_campagny {
+                width: 50%;
+                padding: 0 4px;;
+            }
+
+            .origine, .service {
+                height: 70px;
+            }
+
+            .check {
+                display: inline;
+                font-size: 0.8rem;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+        }
+    }
+}

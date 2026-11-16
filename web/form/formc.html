@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulaire de demande de devis professionnel">
+    <title>Demande de devis | Formulaire</title>
+    <link rel="stylesheet" href="./assets/css/formc.css">
+    <script src="./assets/js/formc.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="form-header">
+            <span class="header-line" aria-hidden="true"></span>
+            <h1>FORMULAIRE</h1>
+        </header>
+
+        <!-- GET vers la page courante, conformément au mode test du TP. -->
+        <form id="devis-form" method="get" action="" novalidate>
+            <div class="form-grid">
+                <div class="field">
+                    <label class="sr-only" for="prenom">Prénom</label>
+                    <input id="prenom" name="prenom" type="text" placeholder="Prénom" autocomplete="given-name" minlength="3" required aria-describedby="prenom-error">
+                    <span class="error" id="prenom-error" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                    <label class="sr-only" for="nom">Nom</label>
+                    <input id="nom" name="nom" type="text" placeholder="Nom" autocomplete="family-name" minlength="3" required aria-describedby="nom-error">
+                    <span class="error" id="nom-error" aria-live="polite"></span>
+                </div>
+                <div class="field full">
+                    <label class="sr-only" for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Email" autocomplete="email" required aria-describedby="email-error">
+                    <span class="error" id="email-error" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                    <label class="sr-only" for="telephone">Téléphone</label>
+                    <input id="telephone" name="telephone" type="tel" placeholder="Tel." autocomplete="tel">
+                </div>
+                <div class="field">
+                    <label class="sr-only" for="societe">Société / collectivité</label>
+                    <input id="societe" name="societe" type="text" placeholder="Société / collectivité" minlength="3" maxlength="30" required aria-describedby="societe-error">
+                    <span class="error" id="societe-error" aria-live="polite"></span>
+                </div>
+                <div class="field full">
+                    <label class="sr-only" for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Message" maxlength="3000" aria-describedby="message-error"></textarea>
+                    <span class="error" id="message-error" aria-live="polite"></span>
+                </div>
+            </div>
+
+            <div class="select-field">
+                <label for="diffusion">Comment avez-vous connu <strong>labotie</strong> ?</label>
+                <select id="diffusion" name="diffusion" required aria-describedby="diffusion-error">
+                    <option value="">-- merci de sélectionner une option --</option>
+                </select>
+                <span class="error" id="diffusion-error" aria-live="polite"></span>
+            </div>
+
+            <div class="select-field">
+                <label for="interet">Vous êtes intéressés par :</label>
+                <select id="interet" name="interet" required aria-describedby="interet-error">
+                    <option value="">-- merci de sélectionner une option --</option>
+                </select>
+                <span class="error" id="interet-error" aria-live="polite"></span>
+            </div>
+
+            <div class="consent-field">
+                <label for="consentement">
+                    <input type="checkbox" id="consentement" name="consentement" value="oui" required>
+                    <span>En envoyant ce formulaire, vous autorisez <strong>labotie</strong> à utiliser vos données uniquement dans le cadre du traitement de votre demande. Elles ne seront en aucun cas utilisées à d’autres fins que celle de vous recontacter.</span>
+                </label>
+                <span class="error" id="consentement-error" aria-live="polite"></span>
+            </div>
+
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+            <button type="submit">ENVOYER</button>
+        </form>
+    </main>
+</body>
+</html>
