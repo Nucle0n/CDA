@@ -75,7 +75,7 @@ function afficherErreur(id, message) {
 }
 
 // 4. On intercepte le clic sur Submit, puis on soumet en JS si tout est valide.
-formulaire.addEventListener("submit", (evenement) => {
+formulaire.addEventListener("submit", evenement => {
     evenement.preventDefault();
     statut.textContent = "";
 

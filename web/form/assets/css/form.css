@@ -1,18 +1,36 @@
+:root {
+    --color-accent: #e91236;
+    --color-input-background: #ececec;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-accent: #e0303f;
+    --color-input-background: #232323;
+  }
+}
+
 * {
     box-sizing: border-box;
+    /* border: 1px dashed black; */
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* transform: translateY(10%); */
+    margin-top: 80px;
+    font-family: Arial, Helvetica, sans-serif;
     /* background-color: rgb(185, 226, 185); */
+    
     header {
+
         #h-bar {
             border-style: none;
             height: 1px;
-            width: 20px;
+            width: 22px;
             background-color: black;
         }
-
+    
         #title {
             text-align: center;
             font-size: medium;
@@ -22,6 +40,7 @@ body {
     main {
         /* background-color: aqua; */
         margin: 0 50px;
+        /* transform: translateY(-60%); */
 
         form {
             display: flex;
@@ -32,7 +51,7 @@ body {
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
-                height: 44px;
+                min-height: 44px;
                 /* background-color: red; */
 
                 margin: 4px 0;
@@ -44,7 +63,7 @@ body {
                 border-radius: 6px;
                 height: 38px;
                 width: 100%;
-                background-color: #ECECEC;
+                background-color: var(--color-input-background);
                 padding-left: 10px;
 
                 margin: 0;
@@ -61,7 +80,7 @@ body {
                 padding: 10px;
             }
 
-            #label_prenom, #label_nom, #label_tel, #label_campagny {
+            #label_prenom, #label_nom, #label_tel, #label_compagny {
                 width: 50%;
                 padding: 0 4px;;
             }
@@ -71,11 +90,124 @@ body {
             }
 
             .check {
-                display: inline;
+                display: inline-block;
                 font-size: 0.8rem;
                 font-weight: bold;
                 margin-top: 10px;
             }
+
+            .submit-btn {
+                border: none;
+                border-radius: 6px;
+
+                background-color: var(--color-accent);
+                color: white;
+
+                padding: 14px 18px;
+                margin-top: 150px;
+                
+                font-weight: 700;
+                font-size: 0.9rem;
+
+                cursor: pointer;
+                box-shadow: 1px 1px 2px black;
+
+                &:hover {
+                    background-color: #ff0000;
+                    box-shadow: 0.5px 0.5px 1px black;
+                }
+            }                
         }
     }
 }
+
+/* Pour mobile */
+/* @media (max-width: 600px) {
+    #label_prenom,
+    #label_nom,
+    #label_tel,
+    #label_compagny {
+        width: 100%;
+    }
+} */
+
+.toggle {
+  --toggle-width: 42px;
+  --toggle-height: 22px;
+  --toggle-radius: 50px;
+  --toggle-bg-off: #e5e7eb;
+  --toggle-bg-on: #800000;
+  --toggle-thumb-size: 14px;
+  --toggle-thumb-offset: 4px;
+  --toggle-thumb-radius: 50%;
+  --toggle-thumb-off: #666666;
+  --toggle-thumb-on: #ffffff;
+  --toggle-transition: 0.3s ease;
+  
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* the real checkbox stays in the page for keyboard and screen reader users */
+.toggle input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+}
+
+.toggle-track {
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: var(--toggle-width);
+  height: var(--toggle-height);
+  background: var(--toggle-bg-off);
+  border-radius: var(--toggle-radius);
+  transition: background-color var(--toggle-transition), border-color var(--toggle-transition);
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 50%;
+  left: var(--toggle-thumb-offset);
+  box-sizing: border-box;
+  width: var(--toggle-thumb-size);
+  height: var(--toggle-thumb-size);
+  background: var(--toggle-thumb-off);
+  border-radius: var(--toggle-thumb-radius);
+  transform: translateY(-50%);
+  transition: transform var(--toggle-transition), background-color var(--toggle-transition), border-color var(--toggle-transition);
+}
+
+.toggle input:checked + .toggle-track {
+  background: var(--toggle-bg-on);
+}
+
+.toggle input:checked + .toggle-track .toggle-thumb {
+  /* travel = track width - borders - thumb size - both gaps */
+  transform: translate(calc(var(--toggle-width) - var(--toggle-thumb-size) - 2 * var(--toggle-thumb-offset)), -50%);
+  background: var(--toggle-thumb-on);
+}
+
+.toggle input:focus-visible + .toggle-track {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toggle-track,
+  .toggle-thumb {
+    transition: none;
+  }
+}
+

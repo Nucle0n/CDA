@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/form.css">
     <script src="assets/js/form.js" defer></script>
 </head>
+
 <body>
     <header>
         <hr id="h-bar">
@@ -17,21 +19,24 @@
         <form action="#" method="get">
             <!-- je mets des labels de 44px de haut pour anticiper une version mobile ^^ -->
             <label for="prenom" id="label_prenom">
-                <input type="text" name="prenom" class="champ" id="prenom" maxlength="100" placeholder="Prénom" required>
+                <input type="text" name="prenom" class="champ" id="prenom" maxlength="100" placeholder="Prénom"
+                    required>
             </label>
             <label for="nom" id="label_nom">
                 <input type="text" name="nom" class="champ" id="nom" maxlength="100" placeholder="Nom" required>
             </label>
             <label for="email" id="label_mail">
-                <input type="email" name="email" class="champ" id="email" placeholder="Email">
+                <input type="email" name="email" class="champ" id="email" placeholder="Email" required>
             </label>
             <label for="tel" id="label_tel">
                 <input type="tel" name="tel" class="champ" id="tel" placeholder="Tel.">
             </label>
-            <label for="compagny" id="label_campagny">
-                <input type="text" name="compagny" class="champ" id="compagny" placeholder="Société/collectivité" maxlength="50">
+            <label for="compagny" id="label_compagny">
+                <input type="text" name="compagny" class="champ" id="compagny" placeholder="Société/collectivité"
+                    maxlength="50">
             </label>
-            <textarea name="message" class="champ t-Tarea" id="txt-area" placeholder="Message" rows="6"></textarea>
+            <textarea name="message" class="champ t-Tarea" id="txt-area" placeholder="Message" rows="6"
+                maxlength="3000"></textarea>
             <label for="origine" class="origine">Comment avez-vous connu laboite ?
                 <select name="origine" id="origine" class="champ">
                     <option value="">-- merci de sélectionner une option --</option>
@@ -42,13 +47,21 @@
                     <option value="">-- merci de sélectionner une option --</option>
                 </select>
             </label>
-            <label for="check" class="check">
+            <label class="check">
                 <input type="checkbox" name="check" class="check" required>
-                <p class="check">En envoyant ce formulaire, vous autorisez laboite à utiliser vos données uniquement dans le cadre du traitement de votre demande. Elles ne seront en aucun cas utilisées à d’autres fins que celle de vous recontacter.
-                </p>
-                </label>
-                <input type="submit" value="ENVOYER" class="submit-btn">
+                En envoyant ce formulaire, vous autorisez laboite à utiliser vos données uniquement dans le cadre du
+                traitement de votre demande. Elles ne seront en aucun cas utilisées à d’autres fins que celle de vous
+                recontacter.
+            </label>
+            <label class="toggle">
+                <input type="checkbox" role="switch" aria-label="Toggle" checked>
+                <span class="toggle-track" aria-hidden="true">
+                    <span class="toggle-thumb"></span>
+                </span>
+            </label>
+            <input type="submit" value="ENVOYER" class="submit-btn">
         </form>
     </main>
 </body>
+
 </html>
