@@ -1,14 +1,32 @@
+
+/* Thème clair par défaut */
 :root {
+    color-scheme: light;
     --color-accent: #e91236;
     --color-input-background: #ececec;
 }
 
+/* Thème sombre si le système est en mode sombre */
 @media (prefers-color-scheme: dark) {
-  :root {
+    :root {
+        color-scheme: dark;
+        --color-accent: #e0303f;
+        --color-input-background: #232323;
+    }
+}
+
+/* Forcer le thème clair */
+:root[data-theme="light"] {
+    color-scheme: light;
+    --color-accent: #e91236;
+    --color-input-background: #ececec;
+}
+
+/* Forcer le thème sombre */
+:root[data-theme="dark"] {
     color-scheme: dark;
     --color-accent: #e0303f;
     --color-input-background: #232323;
-  }
 }
 
 * {
@@ -210,4 +228,3 @@ body {
     transition: none;
   }
 }
-
