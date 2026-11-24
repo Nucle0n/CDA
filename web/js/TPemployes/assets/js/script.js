@@ -28,7 +28,13 @@
 //     }
 // }
 
-// loadEmployees();
+const email = mailGenerator("Tiger Nixon");
+const sal = calcMSalary(320000).toFixed(2);
+const birthYear = birthY(44);
+
+console.log(email);
+console.log(sal);
+console.log(birthYear);
 
 async function loadEmployees(){
     const response = await fetch("./assets/json/employees.json");
@@ -37,7 +43,31 @@ async function loadEmployees(){
     console.table(result.data);
 }
 
-// loadEmployees();
+// --------- Main --------- //
+
+loadEmployees();
+
+
+
+function mailGenerator(fullname){
+    const nameTab = fullname.split(" ")
+    return `${nameTab[0][0]}.${nameTab[1]}@email.com`.toLowerCase();
+}
+
+function calcMSalary(salary) {
+    return (salary / 12);
+}
+
+function birthY(age){
+    const today = new Date();
+    return today.getFullYear() - age;
+}
+
+
+
+
+
+
 
 // -----
 // const iddy = identityGenerator("Tiger Nixon");
@@ -79,10 +109,3 @@ async function loadEmployees(){
 
 // -----
 
-function mailGenerator(fullname){
-    const nameTab = fullname.split(" ")
-    return `${nameTab[0]}.${nameTab[1]}@email.com`.toLowerCase();
-}
-
-const email = mailGenerator("Tiger Nixon");
-console.log(email);
