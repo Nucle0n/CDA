@@ -1,0 +1,47 @@
+
+:root {
+    --base-txt: #626262;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    header {
+        margin-bottom: 10px;
+
+        h1 {
+            color: var(--base-txt);
+            font-weight: normal;
+            padding-bottom: 8px;            
+        }
+        
+        p {
+            color: var(--base-txt);
+            font-style: italic;            
+        }
+    }
+    
+    main {
+
+        table {
+            width: 95vw;
+            text-align: left;
+            border-collapse: collapse;
+
+            th, td {
+                padding: 4px 8px;
+                border: 1px solid var(--base-txt);
+            }
+        }
+
+        table * {
+            border: 1px dashed red;
+        }
+    }
+}
+
