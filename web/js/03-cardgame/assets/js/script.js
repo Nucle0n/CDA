@@ -1,9 +1,28 @@
 // --------- MAIN --------- //
-fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
-    .then(response => { return response.json(); })
-    .then(data => {
+// fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
+//     .then(response => { return response.json(); })
+//     .then(data => {
 
-        // console.log(data);
+//         // console.log(data);
+
+//         displayTable(data);
+//         noLife(data);
+//         playerCard();
+//         triSection(data);
+//         maxStat(data, "victory");
+
+//     })
+//     .catch((error) => console.error("erreur:" + error));
+
+// --- Méthode alternative ---
+async function loadCardgame() {
+    try {
+        const response = await fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json");
+        if (!response.ok) {
+            throw new Error(`http ${response.status}`);
+        }
+        
+        const data = await response.json();
 
         displayTable(data);
         noLife(data);
@@ -11,8 +30,13 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
         triSection(data);
         maxStat(data, "victory");
 
-    })
-    .catch((error) => alert("erreur:" + error));
+    } catch (error) {
+        console.error("Impossible de charger les objets -", error);
+    }
+}
+loadCardgame();
+
+
 
 // --------- FONCTIONS ---------- //
 
