@@ -1,6 +1,7 @@
 // fetch(".assets/json/employees.json")
 // .then(response => {return response.json()})
 // .then((response) => {
+
     
 // tabledata = response.data;
 // creerTableau(tableData);
@@ -30,7 +31,7 @@
 
 const email = mailGenerator("Tiger Nixon");
 const sal = calcMSalary(320000).toFixed(2);
-const birthYear = birthY(44);
+const birthYear = calcbirthY(44);
 
 console.log(email);
 console.log(sal);
@@ -40,13 +41,45 @@ async function loadEmployees(){
     const response = await fetch("./assets/json/employees.json");
     const result   = await response.json();
 
-    console.table(result.data);
-}
+    renderEmployees(result.data);
 
-// --------- Main --------- //
+    // console.table(result.data);
+}
 
 loadEmployees();
 
+function addCell(_row, _value, _class){
+    const newCell = document.createElement("td");
+    newCell.setAttribute("class", _class);
+    newCell.textContent = _value;
+    _row.appendChild(newCell);
+}
+
+function renderEmployees(_data){
+    const tbody = document.querySelector("tbody");
+    
+    for (const employee of _data) {
+
+        const id = employee.id;
+        const fullname = employee.employee_name;
+        const mail = mailGenerator(fullname);
+        const mSalary = calcMSalary(employee.employee_salary);
+        const birthY = calcbirthY(employee.employee_age);
+
+        const tr = document.createElement("tr");
+        tr.setAttribute("id", "row-"+employee.id)
+        
+        addCell(tr, id, "empId");
+        addCell(tr, fullname, "empName");
+        addCell(tr, mail, "empMail");
+        addCell(tr, mSalary.toFixed(2)+"€", "empSal");
+        addCell(tr,birthY, "empBirthY");
+
+        tbody.appendChild(tr);
+       
+        console.log(`${id}, ${fullname}, ${mail}, ${mSalary}, ${birthY}`);
+    }
+}
 
 
 function mailGenerator(fullname){
@@ -58,7 +91,7 @@ function calcMSalary(salary) {
     return (salary / 12);
 }
 
-function birthY(age){
+function calcbirthY(age){
     const today = new Date();
     return today.getFullYear() - age;
 }

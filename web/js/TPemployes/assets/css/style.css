@@ -10,6 +10,7 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
 
     header {
         margin-bottom: 10px;
@@ -32,6 +33,7 @@ body {
             width: 95vw;
             text-align: left;
             border-collapse: collapse;
+            margin-top: 10px;
 
             th, td {
                 padding: 4px 8px;
